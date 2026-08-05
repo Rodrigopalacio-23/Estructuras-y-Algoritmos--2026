@@ -1,4 +1,3 @@
-package JAVA;
 
 public class Persona {
     int dni;      //datos private, todos los datos de los atributos de la clase son privados(encapsulados)

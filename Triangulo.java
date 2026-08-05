@@ -1,4 +1,4 @@
-package JAVA;
+
 import java.util.Scanner;
 
 //Desarrollar un programa que cargue los lados de un triangulo e implemente los siguientes metodos: Inicializar los atributos

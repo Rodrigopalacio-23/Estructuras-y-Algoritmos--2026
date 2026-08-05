@@ -12,8 +12,18 @@
  * @author Michael Kölling and David J. Barnes
  * @version 2016.02.29
  */
-public class ClockDisplay
-{
+public class ClockDisplay {
+    // Clase ClockDisplay lista para ejecución
+    public static void main(String[] args) {
+        ClockDisplay reloj = new ClockDisplay();
+        System.out.println("Hora inicial: " + reloj.getTime());
+        reloj.timeTick();
+        System.out.println("Hora después de un tick: " + reloj.getTime());
+        reloj.setTime(23, 59);
+        System.out.println("Hora establecida a 23:59: " + reloj.getTime());
+        reloj.timeTick();
+        System.out.println("Hora después de tick en 23:59: " + reloj.getTime());
+    }
     private NumberDisplay hours;
     private NumberDisplay minutes;
     private String displayString;    // simulates the actual display
