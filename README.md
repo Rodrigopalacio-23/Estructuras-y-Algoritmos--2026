@@ -1,6 +1,8 @@
 # Estructuras-y-Algoritmos--2026
 Repositorio de trabajos de Estructuras de datos y algoritmos.
 
+[![CI](https://github.com/Rodrigopalacio-23/Estructuras-y-Algoritmos--2026/actions/workflows/ci.yml/badge.svg)](https://github.com/Rodrigopalacio-23/Estructuras-y-Algoritmos--2026/actions/workflows/ci.yml)
+
 ---
 
 ## Agentes y prompts

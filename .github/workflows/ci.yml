@@ -28,3 +28,15 @@ jobs:
 
       - name: Build with Maven (run tests and quality checks)
         run: mvn -B -DskipTests=false -Dcheckstyle.failOnViolation=true -Dspotbugs.failOnError=true verify
+
+      - name: Upload Checkstyle and SpotBugs reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: code-quality-reports
+          path: |
+            target/site/checkstyle.html
+            target/site/checkstyle.xml
+            target/spotbugsXml.xml
+            target/spotbugs/**
+            target/*spotbugs*
