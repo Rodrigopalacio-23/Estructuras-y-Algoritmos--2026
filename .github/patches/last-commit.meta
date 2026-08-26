@@ -1,0 +1,21 @@
+6a215e59d88e78107845f3cf56c94961f5e32105
+Rodrigopalacio-23 <rodrigomirandar3@gmail.com>
+Tue Aug 25 21:54:09 2026 -0300
+chore: remove archived duplicate agent docs
+
+diff --git a/.github/archive/AGENTE_ANALISTA_PRINCIPAL.md b/.github/archive/AGENTE_ANALISTA_PRINCIPAL.md
+deleted file mode 100644
+index 513f948..0000000
+--- a/.github/archive/AGENTE_ANALISTA_PRINCIPAL.md
++++ /dev/null
+@@ -1,3 +0,0 @@
+-# Archived: AGENTE_ANALISTA_PRINCIPAL.md
+-
+-<COPIED FROM ROOT AGENTE_ANALISTA_PRINCIPAL.md - archived copy>
+diff --git a/.github/archive/AGENTS.md b/.github/archive/AGENTS.md
+deleted file mode 100644
+index 90649e6..0000000
+--- a/.github/archive/AGENTS.md
++++ /dev/null
+@@ -1 +0,0 @@
+-<COPIED FROM ROOT AGENTS.md - archived copy>
