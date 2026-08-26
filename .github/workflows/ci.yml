@@ -26,5 +26,5 @@ jobs:
           key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
           restore-keys: ${{ runner.os }}-m2-
 
-      - name: Build with Maven
-        run: mvn -B -DskipTests=false package
+      - name: Build with Maven (run tests and quality checks)
+        run: mvn -B -DskipTests=false -Dcheckstyle.failOnViolation=true -Dspotbugs.failOnError=true verify
