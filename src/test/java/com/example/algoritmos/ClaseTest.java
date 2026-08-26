@@ -17,7 +17,8 @@ public class ClaseTest {
         try {
             Clase.main(new String[0]);
             String out = baos.toString().trim();
-            assertTrue(out.contains("Hola desde Clase") || out.contains("Hola mundo"));
+            // strict assertion: Clase.main() should print exactly "Hola desde Clase"
+            org.junit.jupiter.api.Assertions.assertEquals("Hola desde Clase", out);
         } finally {
             System.setOut(originalOut);
         }
