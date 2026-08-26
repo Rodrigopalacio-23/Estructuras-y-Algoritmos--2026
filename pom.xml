@@ -10,6 +10,9 @@
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
+        <!-- code quality toggles (false by default; enable in CI with -Dcheckstyle.failOnViolation=true) -->
+        <checkstyle.failOnViolation>false</checkstyle.failOnViolation>
+        <spotbugs.failOnError>false</spotbugs.failOnError>
     </properties>
     <build>
         <sourceDirectory>src/main/java</sourceDirectory>
@@ -70,8 +73,10 @@
                 <version>2.32.0</version>
                 <executions>
                     <execution>
+                        <id>spotless-check</id>
+                        <phase>verify</phase>
                         <goals>
-                            <goal>apply</goal>
+                            <goal>check</goal>
                         </goals>
                     </execution>
                 </executions>
@@ -97,7 +102,7 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <failOnError>false</failOnError>
+                    <failOnError>${spotbugs.failOnError}</failOnError>
                 </configuration>
             </plugin>
         </plugins>
