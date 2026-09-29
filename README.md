@@ -37,3 +37,4 @@ java -cp out com.example.algoritmos.HolaMundo
 ```
 
 Nota: las rutas con espacios pueden requerir comillas. Se recomienda usar la estructura `src/main/java` y declarar paquetes para evitar problemas.
+# StudyPath
