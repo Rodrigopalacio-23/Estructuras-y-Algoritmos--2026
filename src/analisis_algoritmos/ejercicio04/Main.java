@@ -1,4 +1,4 @@
-package ejercicio04;
+package analisis_algoritmos.ejercicio04;
 
 import java.util.Arrays;
 import java.util.HashSet;

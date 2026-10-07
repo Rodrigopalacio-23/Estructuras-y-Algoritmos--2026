@@ -1,4 +1,4 @@
-package ejercicio08;
+package analisis_algoritmos.ejercicio08;
 
 import java.util.Arrays;
 

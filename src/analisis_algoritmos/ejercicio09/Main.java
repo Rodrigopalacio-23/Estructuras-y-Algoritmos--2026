@@ -1,4 +1,4 @@
-package ejercicio09;
+package analisis_algoritmos.ejercicio09;
 
 import java.util.Arrays;
 
