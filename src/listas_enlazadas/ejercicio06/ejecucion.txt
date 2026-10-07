@@ -1,0 +1,26 @@
+==================================================
+ EJERCICIO 6: ELIMINAR NODO POR POSICIÓN
+==================================================
+
+--- 1. Eliminar por posición en lista vacía ---
+Capturada -> Posición inválida para eliminar: 0. Tamaño actual: 0.
+
+Lista inicial (size = 5): 10 -> 20 -> 30 -> 40 -> 50 -> null
+
+--- 2. Eliminar posición 0 (inicio: valor 10) ---
+20 -> 30 -> 40 -> 50 -> null
+Tamaño actual: 4
+
+--- 3. Eliminar posición 1 (medio: valor 30) ---
+20 -> 40 -> 50 -> null
+Tamaño actual: 3
+
+--- 4. Eliminar posición 2 (final: valor 50) ---
+20 -> 40 -> null
+Tamaño actual: 2
+
+--- 5. Casos de error de límites ---
+Eliminar posición negativa (-1): Capturada -> Posición inválida para eliminar: -1. Tamaño actual: 2.
+Eliminar posición igual a size (2): Capturada -> Posición inválida para eliminar: 2. Tamaño actual: 2.
+
+Pruebas de Ejercicio 6 completadas con éxito.

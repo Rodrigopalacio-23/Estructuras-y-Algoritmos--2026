@@ -1,0 +1,23 @@
+==================================================
+ EJERCICIO 7: MODIFICAR ELEMENTO POR POSICIÓN
+==================================================
+
+--- 1. Modificar en lista vacía ---
+Capturada -> Posición inválida para modificar: 0. Tamaño actual: 0.
+
+Lista original: 10 -> 20 -> 30 -> 40 -> null
+
+--- 2. Modificar posición 0 (cambiar 10 por 15) ---
+15 -> 20 -> 30 -> 40 -> null
+
+--- 3. Modificar posición 2 (cambiar 30 por 35) ---
+15 -> 20 -> 35 -> 40 -> null
+
+--- 4. Modificar posición 3 (cambiar 40 por 45) ---
+15 -> 20 -> 35 -> 45 -> null
+
+--- 5. Casos límite de error ---
+Modificar posición negativa (-1): Capturada -> Posición inválida para modificar: -1. Tamaño actual: 4.
+Modificar posición igual a size (4): Capturada -> Posición inválida para modificar: 4. Tamaño actual: 4.
+
+Pruebas de Ejercicio 7 completadas con éxito.

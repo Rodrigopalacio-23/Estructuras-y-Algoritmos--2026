@@ -1,0 +1,18 @@
+==================================================
+ EJERCICIO 1: LISTA ENLAZADA SIMPLE BASE
+==================================================
+
+¿Lista recién creada está vacía? true | Tamaño: 0
+Lista vacía (null)
+
+--- 1. Insertando elementos al inicio (30, 20, 10) ---
+10 -> 20 -> 30 -> null
+Tamaño actual: 3 | ¿Está vacía? false
+
+--- 2. Insertando elementos al final (40, 50) ---
+10 -> 20 -> 30 -> 40 -> 50 -> null
+Tamaño actual: 5
+
+--- 3. Verificación de invariantes ---
+Esperado: 10 -> 20 -> 30 -> 40 -> 50 -> null
+Pruebas de Ejercicio 1 completadas con éxito.

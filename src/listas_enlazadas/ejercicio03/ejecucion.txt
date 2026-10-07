@@ -1,0 +1,20 @@
+==================================================
+ EJERCICIO 3: OBTENER ELEMENTO POR POSICIÓN
+==================================================
+
+--- 1. Caso límite: Obtener en lista vacía ---
+Excepción capturada: Índice fuera de rango: 0. Tamaño actual de la lista: 0.
+
+Lista de prueba (size = 4): 100 -> 200 -> 300 -> 400 -> null
+
+--- 2. Casos válidos de obtención ---
+Posición 0 (inicio): 100
+Posición 2 (medio):  300
+Posición 3 (final):  400
+
+--- 3. Casos de error con índices fuera de rango ---
+Intentando obtener posición negativa (-1): Capturada -> Índice fuera de rango: -1. Tamaño actual de la lista: 4.
+Intentando obtener posición igual al tamaño (4): Capturada -> Índice fuera de rango: 4. Tamaño actual de la lista: 4.
+Intentando obtener posición excesiva (10): Capturada -> Índice fuera de rango: 10. Tamaño actual de la lista: 4.
+
+Pruebas de Ejercicio 3 completadas con éxito.

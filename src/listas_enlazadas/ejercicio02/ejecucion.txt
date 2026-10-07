@@ -1,0 +1,16 @@
+==================================================
+ EJERCICIO 2: BÚSQUEDA SECUENCIAL EN LISTA
+==================================================
+
+--- 1. Búsqueda en lista vacía ---
+¿buscar(10) en lista vacía? false
+
+Lista de prueba: 10 -> 25 -> 40 -> 55 -> null
+
+--- 2. Casos de prueba de búsqueda ---
+Buscar primer nodo (10):    true
+Buscar nodo medio (40):      true
+Buscar último nodo (55):     true
+Buscar inexistente (99):     false
+
+Pruebas de Ejercicio 2 completadas con éxito.

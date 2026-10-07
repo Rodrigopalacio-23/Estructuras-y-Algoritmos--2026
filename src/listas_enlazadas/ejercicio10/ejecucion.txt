@@ -1,0 +1,27 @@
+==================================================
+ EJERCICIO 10: LISTA ENLAZADA GENÉRICA <T>
+==================================================
+
+--- 1. Prueba con ListaEnlazada<Integer> ---
+10 -> 20 -> 10 -> 30 -> null
+¿Buscar 20? true | Ocurrencias de 10: 2
+Invertir lista de enteros:
+30 -> 10 -> 20 -> 10 -> null
+
+--- 2. Prueba con ListaEnlazada<String> ---
+Estructuras -> De -> Datos -> null
+Elemento en posición 1: "De"
+Estructuras -> De -> Avanzadas -> Datos -> null
+Eliminar "De": true
+Estructuras -> Avanzadas -> Datos -> null
+
+--- 3. Prueba con ListaEnlazada<Alumno> ---
+Alumno[Legajo=101, Nombre="Ana Garcia", Promedio=9,5] -> Alumno[Legajo=102, Nombre="Bruno Diaz", Promedio=8,0] -> Alumno[Legajo=103, Nombre="Carla Rossi", Promedio=9,0] -> null
+¿Existe alumno con legajo 102? true
+Eliminando alumno con legajo 102:
+Alumno[Legajo=101, Nombre="Ana Garcia", Promedio=9,5] -> Alumno[Legajo=103, Nombre="Carla Rossi", Promedio=9,0] -> null
+
+Invertir lista de alumnos:
+Alumno[Legajo=103, Nombre="Carla Rossi", Promedio=9,0] -> Alumno[Legajo=101, Nombre="Ana Garcia", Promedio=9,5] -> null
+
+Pruebas de Ejercicio 10 completadas con éxito.

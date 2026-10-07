@@ -1,0 +1,21 @@
+==================================================
+ EJERCICIO 9: INVERTIR LISTA ENLAZADA SIMPLE
+==================================================
+
+--- 1. Invertir lista vacía ---
+Lista vacía (null)
+
+--- 2. Invertir lista de un solo nodo ---
+Antes:   100 -> null
+Después: 100 -> null
+
+--- 3. Invertir lista del enunciado (10 -> 20 -> 30 -> 40) ---
+Original:  10 -> 20 -> 30 -> 40 -> null
+Invertida: 40 -> 30 -> 20 -> 10 -> null
+Esperado:  40 -> 30 -> 20 -> 10 -> null
+Tamaño conservado: 4
+
+--- 4. Invertir nuevamente (reversión doble) ---
+Restaurada: 10 -> 20 -> 30 -> 40 -> null
+
+Pruebas de Ejercicio 9 completadas con éxito.

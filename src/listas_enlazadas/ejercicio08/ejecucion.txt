@@ -1,0 +1,23 @@
+==================================================
+ EJERCICIO 8: CONTAR OCURRENCIAS DE UN VALOR
+==================================================
+
+--- 1. Contar en lista vacía ---
+Ocurrencias de 10 en lista vacía: 0
+
+Lista del enunciado: 10 -> 20 -> 10 -> 30 -> 10 -> null
+
+--- 2. Caso de la consigna: Contar valor 10 ---
+Ocurrencias de 10: 3 (Esperado: 3)
+
+--- 3. Contar valor con 1 aparición (20) ---
+Ocurrencias de 20: 1 (Esperado: 1)
+
+--- 4. Contar valor inexistente (99) ---
+Ocurrencias de 99: 0 (Esperado: 0)
+
+--- 5. Lista con todos elementos idénticos ---
+7 -> 7 -> 7 -> 7 -> null
+Ocurrencias de 7: 4 (Esperado: 4)
+
+Pruebas de Ejercicio 8 completadas con éxito.

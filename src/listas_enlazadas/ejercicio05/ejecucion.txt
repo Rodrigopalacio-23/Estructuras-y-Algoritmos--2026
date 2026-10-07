@@ -1,0 +1,30 @@
+==================================================
+ EJERCICIO 5: ELIMINAR NODO POR VALOR
+==================================================
+
+--- 1. Eliminar en lista vacía ---
+¿eliminar(10) en vacía? false | Tamaño: 0
+
+Lista inicial (size = 5): 10 -> 20 -> 30 -> 40 -> 50 -> null
+
+--- 2. Eliminar primer nodo (10) ---
+Resultado: true
+20 -> 30 -> 40 -> 50 -> null
+Tamaño actual: 4
+
+--- 3. Eliminar nodo del medio (30) ---
+Resultado: true
+20 -> 40 -> 50 -> null
+Tamaño actual: 3
+
+--- 4. Eliminar último nodo (50) ---
+Resultado: true
+20 -> 40 -> null
+Tamaño actual: 2
+
+--- 5. Eliminar dato inexistente (99) ---
+Resultado: false
+20 -> 40 -> null
+Tamaño actual: 2
+
+Pruebas de Ejercicio 5 completadas con éxito.

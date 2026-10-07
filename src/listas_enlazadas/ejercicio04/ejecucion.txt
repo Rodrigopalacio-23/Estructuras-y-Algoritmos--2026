@@ -1,0 +1,28 @@
+==================================================
+ EJERCICIO 4: INSERTAR EN POSICIÓN ESPECÍFICA
+==================================================
+
+--- 1. Inserción en posición 0 (inicio en lista vacía) ---
+20 -> null
+Tamaño: 1
+
+--- 2. Inserción en posición 0 (nuevo inicio) ---
+10 -> 20 -> null
+Tamaño: 2
+
+--- 3. Inserción en posición 2 (final: pos == size) ---
+10 -> 20 -> 40 -> null
+Tamaño: 3
+
+--- 4. Inserción en el medio (posición 2 con valor 30) ---
+10 -> 20 -> 30 -> 40 -> null
+Tamaño: 4
+
+--- 5. Casos límite de error (posiciones fuera de rango) ---
+Insertar en posición negativa (-1): Capturada -> Posición inválida: -1. Rango permitido: [0, 4].
+Insertar en posición mayor al tamaño (10 > 4): Capturada -> Posición inválida: 10. Rango permitido: [0, 4].
+
+Estado final esperado: 10 -> 20 -> 30 -> 40 -> null
+Estado final obtenido: 10 -> 20 -> 30 -> 40 -> null
+
+Pruebas de Ejercicio 4 completadas con éxito.
