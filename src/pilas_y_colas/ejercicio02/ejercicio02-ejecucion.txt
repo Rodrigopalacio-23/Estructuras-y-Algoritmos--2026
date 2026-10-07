@@ -1,0 +1,42 @@
+==================================================
+ EJERCICIO 2: SIMULADOR DE TORRE DE PLATOS (LIFO)
+==================================================
+
+--- 1. Apilando platos iniciales ---
+-> Se apiló: Plato Cerámica #1 en la cima.
+-> Se apiló: Plato Cerámica #2 en la cima.
+-> Se apiló: Plato Cerámica #3 en la cima.
+
+[Vista de la Torre (de arriba hacia abajo)]
+   | Plato Cerámica #3 | <-- SUPERIOR (CIMA)
+   | Plato Cerámica #2 | 
+   | Plato Cerámica #1 | 
+   +------------------+
+
+Plato superior actual: Plato Cerámica #3
+
+--- 2. Llenando la torre y forzando desbordamiento ---
+-> Se apiló: Plato Especial #4 en la cima.
+
+[Vista de la Torre (de arriba hacia abajo)]
+   | Plato Especial #4 | <-- SUPERIOR (CIMA)
+   | Plato Cerámica #3 | 
+   | Plato Cerámica #2 | 
+   | Plato Cerámica #1 | 
+   +------------------+
+
+Excepción capturada: Error: La torre de platos está llena (capacidad 4). No se puede agregar: Plato Extra #5
+
+--- 3. Retirando platos (Comportamiento LIFO) ---
+Retirando: Plato Especial #4
+Retirando: Plato Cerámica #3
+Retirando: Plato Cerámica #2
+Retirando: Plato Cerámica #1
+
+[Vista de la Torre (de arriba hacia abajo)]
+   (Torre vacía)
+
+--- 4. Intento de retiro en torre vacía ---
+Excepción capturada: Error: La torre de platos está vacía. No hay platos para retirar.
+
+Prueba de Ejercicio 2 completada con éxito.

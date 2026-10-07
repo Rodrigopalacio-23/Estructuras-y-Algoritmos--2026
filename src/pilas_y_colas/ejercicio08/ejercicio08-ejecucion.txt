@@ -1,0 +1,27 @@
+==================================================
+ EJERCICIO 8: COLA DE IMPRESIÓN (SPOOLER FIFO)
+==================================================
+
+--- 1. Envío de trabajos de impresión ---
+-> [Spooler] Recibido trabajo: "Tesis_Final.pdf" (120 páginas) (Trabajos en cola: 1)
+-> [Spooler] Recibido trabajo: "Resumen_Historia.docx" (15 páginas) (Trabajos en cola: 2)
+-> [Spooler] Recibido trabajo: "Factura_Compra.pdf" (2 páginas) (Trabajos en cola: 3)
+
+Próximo en salir por impresora: "Tesis_Final.pdf" (120 páginas)
+Total de páginas acumuladas en espera: 137 págs.
+
+--- 2. Llenado del buffer y saturación ---
+-> [Spooler] Recibido trabajo: "Presentacion.pptx" (45 páginas) (Trabajos en cola: 4)
+Excepción capturada: Error: Búfer de impresión lleno (capacidad 4). No se puede encolar: Reporte_Mensual.xlsx
+
+--- 3. Procesamiento en orden secuencial FIFO ---
+<- [Impresora] Imprimiendo: "Tesis_Final.pdf" (120 páginas) | Páginas impresas: 120
+<- [Impresora] Imprimiendo: "Resumen_Historia.docx" (15 páginas) | Páginas impresas: 15
+<- [Impresora] Imprimiendo: "Factura_Compra.pdf" (2 páginas) | Páginas impresas: 2
+<- [Impresora] Imprimiendo: "Presentacion.pptx" (45 páginas) | Páginas impresas: 45
+
+--- 4. Intento de impresión con buffer vacío ---
+Excepción capturada: Error: No hay documentos en cola para imprimir.
+
+
+Prueba de Ejercicio 8 completada con éxito.

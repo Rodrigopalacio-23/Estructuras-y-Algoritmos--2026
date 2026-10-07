@@ -1,0 +1,32 @@
+==================================================
+ EJERCICIO 5: PILA GENÉRICA <T> CON ARREGLOS
+==================================================
+
+--- 1. Pila<Integer> ---
+[Base -> Cima]: 100, 200, 300 (size = 3)
+Cima actual: 300
+Desapilado: 300
+[Base -> Cima]: 100, 200 (size = 2)
+
+--- 2. Pila<String> ---
+[Base -> Cima]: Java, Genéricos, Estructuras (size = 3)
+Cima actual: Estructuras
+Desapilado: Estructuras
+[Base -> Cima]: Java, Genéricos (size = 2)
+
+--- 3. Pila<Tarea> (Objetos simples) ---
+[Base -> Cima]: [Diseñar modelo (Prioridad 1)], [Implementar pruebas (Prioridad 2)], [Documentar código (Prioridad 3)] (size = 3)
+Tarea en cima: [Documentar código (Prioridad 3)]
+
+--- 4. Caso límite en Pila<Tarea>: Push en pila llena ---
+Excepción capturada: Error: Pila llena (desbordamiento). No se puede insertar: [Deploy (Prioridad 4)]
+
+Desapilando todas las tareas:
+Procesada: [Documentar código (Prioridad 3)]
+Procesada: [Implementar pruebas (Prioridad 2)]
+Procesada: [Diseñar modelo (Prioridad 1)]
+
+--- 5. Caso límite: Pop en pila vacía ---
+Excepción capturada: Error: Pila vacía (subdesbordamiento). No se puede hacer pop.
+
+Prueba de Ejercicio 5 completada con éxito.

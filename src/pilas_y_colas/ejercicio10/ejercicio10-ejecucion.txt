@@ -1,0 +1,69 @@
+==================================================
+ EJERCICIO 10: COLA CIRCULAR (RING BUFFER)
+==================================================
+
+
+-------------------------------------------------------------
+ ESTADO INICIAL (Vacía)
+-------------------------------------------------------------
+Arreglo físico en memoria: [ LIBRE | LIBRE | LIBRE | LIBRE | LIBRE ]
+Punteros: front = 0, rear = -1 | Cantidad de elementos: 0/5
+¿Está vacía? true | ¿Está llena? false
+
+--- 1. Llenando la cola con 5 elementos (10, 20, 30, 40, 50) ---
+enqueue(10) -> rear avanzó circularmente a pos 0 | elementos: 1/5
+enqueue(20) -> rear avanzó circularmente a pos 1 | elementos: 2/5
+enqueue(30) -> rear avanzó circularmente a pos 2 | elementos: 3/5
+enqueue(40) -> rear avanzó circularmente a pos 3 | elementos: 4/5
+enqueue(50) -> rear avanzó circularmente a pos 4 | elementos: 5/5
+
+-------------------------------------------------------------
+ ESTADO TRAS LLENADO INICIAL
+-------------------------------------------------------------
+Arreglo físico en memoria: [   10 |   20 |   30 |   40 |   50 ]
+Punteros: front = 0, rear = 4 | Cantidad de elementos: 5/5
+¿Está vacía? false | ¿Está llena? true
+
+--- 2. Desencolando 2 elementos (libera índices 0 y 1) ---
+dequeue() = 10 -> front avanzó circularmente a pos 1 | elementos: 4/5
+dequeue() = 20 -> front avanzó circularmente a pos 2 | elementos: 3/5
+
+-------------------------------------------------------------
+ ESTADO TRAS DESENCOLAR (Índices 0 y 1 ahora están libres)
+-------------------------------------------------------------
+Arreglo físico en memoria: [ LIBRE | LIBRE |   30 |   40 |   50 ]
+Punteros: front = 2, rear = 4 | Cantidad de elementos: 3/5
+¿Está vacía? false | ¿Está llena? false
+
+--- 3. Encolando 60 y 70 (Demostración de reutilización circular) ---
+enqueue(60) -> rear avanzó circularmente a pos 0 | elementos: 4/5
+enqueue(70) -> rear avanzó circularmente a pos 1 | elementos: 5/5
+
+-------------------------------------------------------------
+ ESTADO TRAS REUTILIZACIÓN CIRCULAR (rear volvió al inicio)
+-------------------------------------------------------------
+Arreglo físico en memoria: [   60 |   70 |   30 |   40 |   50 ]
+Punteros: front = 2, rear = 1 | Cantidad de elementos: 5/5
+¿Está vacía? false | ¿Está llena? true
+
+--- 4. Intento de encolar en cola circular llena ---
+Excepción capturada: Error: Cola circular llena. No se puede encolar: 80
+
+--- 5. Desencolando todos los elementos restantes (Orden FIFO) ---
+dequeue() = 30 -> front avanzó circularmente a pos 3 | elementos: 4/5
+dequeue() = 40 -> front avanzó circularmente a pos 4 | elementos: 3/5
+dequeue() = 50 -> front avanzó circularmente a pos 0 | elementos: 2/5
+dequeue() = 60 -> front avanzó circularmente a pos 1 | elementos: 1/5
+dequeue() = 70 -> front avanzó circularmente a pos 2 | elementos: 0/5
+
+-------------------------------------------------------------
+ ESTADO FINAL (Completamente vacía tras vaciado circular)
+-------------------------------------------------------------
+Arreglo físico en memoria: [ LIBRE | LIBRE | LIBRE | LIBRE | LIBRE ]
+Punteros: front = 2, rear = 1 | Cantidad de elementos: 0/5
+¿Está vacía? true | ¿Está llena? false
+
+--- 6. Intento de desencolar en cola vacía ---
+Excepción capturada: Error: Cola circular vacía. No se puede desencolar.
+
+Prueba de Ejercicio 10 completada con éxito.

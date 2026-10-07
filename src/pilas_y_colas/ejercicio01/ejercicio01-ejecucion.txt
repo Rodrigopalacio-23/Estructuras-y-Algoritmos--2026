@@ -1,0 +1,28 @@
+==================================================
+ EJERCICIO 1: PILA DE ENTEROS CON ARREGLO
+==================================================
+
+Estado de la pila (base -> cima): [] | top = -1 | size = 0 | capacidad = 3
+¿Está vacía? true | ¿Está llena? false
+
+--- 1. Apilando elementos (10, 20, 30) ---
+Estado de la pila (base -> cima): [10] | top = 0 | size = 1 | capacidad = 3
+Estado de la pila (base -> cima): [10, 20] | top = 1 | size = 2 | capacidad = 3
+Estado de la pila (base -> cima): [10, 20, 30] | top = 2 | size = 3 | capacidad = 3
+¿Está llena? true | Elemento en cima (peek): 30
+
+--- 2. Caso límite: Push en pila llena ---
+Excepción capturada: Error: La pila está llena (desbordamiento). No se puede insertar 40
+
+--- 3. Desapilando elementos ---
+pop() -> 30
+Estado de la pila (base -> cima): [10, 20] | top = 1 | size = 2 | capacidad = 3
+pop() -> 20
+Estado de la pila (base -> cima): [10] | top = 0 | size = 1 | capacidad = 3
+pop() -> 10
+Estado de la pila (base -> cima): [] | top = -1 | size = 0 | capacidad = 3
+
+--- 4. Caso límite: Pop en pila vacía ---
+Excepción capturada: Error: La pila está vacía (subdesbordamiento). No se puede hacer pop.
+
+Prueba de Ejercicio 1 completada con éxito.

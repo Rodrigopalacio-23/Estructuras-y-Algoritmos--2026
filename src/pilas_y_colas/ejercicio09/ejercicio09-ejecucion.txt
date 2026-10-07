@@ -1,0 +1,45 @@
+=====================================================================
+ EJERCICIO 9: PROBLEMA DE DESPERDICIO DE ESPACIO EN COLA SIMPLE
+=====================================================================
+
+>>> TANDA 1: Encolando 5 elementos hasta ocupar todo el arreglo (10, 20, 30, 40, 50)...
+enqueue(10) -> rear en pos 0 | Elementos activos: 1
+enqueue(20) -> rear en pos 1 | Elementos activos: 2
+enqueue(30) -> rear en pos 2 | Elementos activos: 3
+enqueue(40) -> rear en pos 3 | Elementos activos: 4
+enqueue(50) -> rear en pos 4 | Elementos activos: 5
+
+-------------------------------------------------------------
+ ESTADO TRAS TANDA 1 (Arreglo lleno)
+-------------------------------------------------------------
+Celdas físicas del arreglo: [   10 |   20 |   30 |   40 |   50 ]
+Índices del arreglo:        [   0   |   1   |   2   |   3   |   4   ]
+Punteros actuales: front = 0, rear = 4
+Espacios libres al inicio (inutilizables): 0
+Elementos activos en la cola: 5 / 5
+
+>>> TANDA 2: Desencolando los 3 primeros elementos...
+dequeue() = 10 -> front avanzó a pos 1 | Elementos activos: 4
+dequeue() = 20 -> front avanzó a pos 2 | Elementos activos: 3
+dequeue() = 30 -> front avanzó a pos 3 | Elementos activos: 2
+
+-------------------------------------------------------------
+ ESTADO TRAS TANDA 2 (Espacios liberados al inicio)
+-------------------------------------------------------------
+Celdas físicas del arreglo: [ LIBRE | LIBRE | LIBRE |   40 |   50 ]
+Índices del arreglo:        [   0   |   1   |   2   |   3   |   4   ]
+Punteros actuales: front = 3, rear = 4
+Espacios libres al inicio (inutilizables): 3
+Elementos activos en la cola: 2 / 5
+
+>>> TANDA 3: Intentando encolar un nuevo elemento (60)...
+
+[DEMOSTRACIÓN DEL PROBLEMA]
+Excepción capturada: ¡FALSO DESBORDAMIENTO! No se puede encolar 60 porque rear=4 llegó al final del arreglo, a pesar de que hay 3 espacios libres al inicio.
+
+--- Conclusión pedagógica del Ejercicio 9 ---
+Las posiciones 0, 1 y 2 están vacías en memoria RAM, pero el puntero 'rear'
+quedó bloqueado en el índice 4. La cola simple no puede 'dar la vuelta'.
+Para resolver esta ineficiencia se requiere implementar una Cola Circular.
+
+Prueba de Ejercicio 9 completada con éxito.

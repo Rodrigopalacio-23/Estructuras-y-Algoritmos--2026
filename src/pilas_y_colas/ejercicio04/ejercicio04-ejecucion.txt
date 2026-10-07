@@ -1,0 +1,32 @@
+==================================================
+ EJERCICIO 4: HISTORIAL DE NAVEGACIÓN (LIFO)
+==================================================
+
+--- 1. Navegación secuencial ---
+-> Navegando a: https://www.google.com
+-> Navegando a: https://es.wikipedia.org
+-> Navegando a: https://github.com
+-> Navegando a: https://stackoverflow.com
+[Pila de Historial (inicio -> cima)]: https://www.google.com -> https://es.wikipedia.org -> https://github.com -> https://stackoverflow.com (ACTUAL)
+
+Página actual: https://stackoverflow.com
+
+--- 2. Retrocediendo páginas (Principio LIFO) ---
+<- Retrocediendo desde "https://stackoverflow.com" hacia "https://github.com"
+[Pila de Historial (inicio -> cima)]: https://www.google.com -> https://es.wikipedia.org -> https://github.com (ACTUAL)
+<- Retrocediendo desde "https://github.com" hacia "https://es.wikipedia.org"
+[Pila de Historial (inicio -> cima)]: https://www.google.com -> https://es.wikipedia.org (ACTUAL)
+
+--- 3. Visita de una nueva URL tras retroceder ---
+-> Navegando a: https://www.reddit.com
+[Pila de Historial (inicio -> cima)]: https://www.google.com -> https://es.wikipedia.org -> https://www.reddit.com (ACTUAL)
+
+--- 4. Retrocediendo hasta agotar el historial ---
+<- Retrocediendo desde "https://www.reddit.com" hacia "https://es.wikipedia.org"
+<- Retrocediendo desde "https://es.wikipedia.org" hacia "https://www.google.com"
+[Pila de Historial (inicio -> cima)]: https://www.google.com (ACTUAL)
+
+--- 5. Intento de retroceder más allá de la página inicial ---
+Excepción capturada: Error: No es posible retroceder más. Estás en la primera página o el historial está vacío.
+
+Prueba de Ejercicio 4 completada con éxito.

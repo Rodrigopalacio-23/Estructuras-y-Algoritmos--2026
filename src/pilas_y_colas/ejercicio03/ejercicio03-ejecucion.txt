@@ -1,0 +1,29 @@
+==================================================
+ EJERCICIO 3: VALIDAR PARÉNTESIS BALANCEADOS
+==================================================
+
+Prueba 1:
+   Expresión: "(5 + 3) * (2 + 1)"
+   Resultado: válido
+
+Prueba 2:
+   Expresión: "(5 + 3)) * (2 + 1"
+   Resultado: inválido
+
+Prueba 3:
+   Expresión: ")("
+   Resultado: inválido
+
+Prueba 4:
+   Expresión: "5 + 3 * 2"
+   Resultado: válido
+
+Prueba 5:
+   Expresión: "((10 - 2) * (3 + (4 / 2)))"
+   Resultado: válido
+
+Prueba 6:
+   Expresión: "((5 + 2)"
+   Resultado: inválido
+
+Prueba de Ejercicio 3 completada con éxito.

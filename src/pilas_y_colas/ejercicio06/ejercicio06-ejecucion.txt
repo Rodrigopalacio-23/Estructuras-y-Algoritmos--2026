@@ -1,0 +1,27 @@
+==================================================
+ EJERCICIO 6: COLA SIMPLE DE ENTEROS (FIFO)
+==================================================
+
+[Estado] Arreglo interno: [0, 0, 0] | front = 0, rear = -1, size = 0/3
+¿Está vacía? true | ¿Está llena? false
+
+--- 1. Encolando elementos (10, 20, 30) ---
+enqueue(10) -> rear avanzó a 0 | size = 1
+enqueue(20) -> rear avanzó a 1 | size = 2
+enqueue(30) -> rear avanzó a 2 | size = 3
+[Estado] Arreglo interno: [10, 20, 30] | front = 0, rear = 2, size = 3/3
+Elemento al frente (front): 10 | ¿Está llena? true
+
+--- 2. Caso límite: Enqueue en cola llena ---
+Excepción capturada: Error: La cola está llena (desbordamiento). No se puede encolar: 40
+
+--- 3. Desencolando elementos (Orden FIFO) ---
+dequeue() = 10 -> front avanzó a 1 | size = 2
+dequeue() = 20 -> front avanzó a 2 | size = 1
+dequeue() = 30 -> front avanzó a 3 | size = 0
+[Estado] Arreglo interno: [10, 20, 30] | front = 3, rear = 2, size = 0/3
+
+--- 4. Caso límite: Dequeue en cola vacía ---
+Excepción capturada: Error: La cola está vacía (subdesbordamiento). No se puede desencolar.
+
+Prueba de Ejercicio 6 completada con éxito.

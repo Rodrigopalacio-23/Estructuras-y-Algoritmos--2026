@@ -1,0 +1,25 @@
+==================================================
+ EJERCICIO 7: SISTEMA DE TURNOS (FIFO)
+==================================================
+
+--- 1. Llegada de personas a la oficina ---
+-> Se emitió Turno #001 - Carlos Gomez (Personas en espera: 1)
+-> Se emitió Turno #002 - Beatriz Perez (Personas en espera: 2)
+-> Se emitió Turno #003 - Andres Lopez (Personas en espera: 3)
+
+Próximo en ser llamado: Turno #001 - Carlos Gomez
+
+--- 2. Llenado de sala y caso límite ---
+-> Se emitió Turno #004 - Diana Ruiz (Personas en espera: 4)
+Excepción capturada: Error: Sala de espera llena (capacidad 4). No se puede emitir turno para: Elena Morales
+
+--- 3. Atención en ventanilla (Orden FIFO riguroso) ---
+<- [Ventanilla] Atendiendo a: Turno #001 - Carlos Gomez (Restan en espera: 3)
+<- [Ventanilla] Atendiendo a: Turno #002 - Beatriz Perez (Restan en espera: 2)
+<- [Ventanilla] Atendiendo a: Turno #003 - Andres Lopez (Restan en espera: 1)
+<- [Ventanilla] Atendiendo a: Turno #004 - Diana Ruiz (Restan en espera: 0)
+
+--- 4. Intento de atención con sala vacía ---
+Excepción capturada: Error: No hay clientes esperando en la fila.
+
+Prueba de Ejercicio 7 completada con éxito.
