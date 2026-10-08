@@ -1,0 +1,34 @@
+==================================================
+ EJERCICIO 1: PILA ENLAZADA DE ENTEROS
+==================================================
+
+¿Pila recién creada está vacía? true | Tamaño: 0
+Pila vacía: [ ]
+
+--- 1. Prueba de casos límite en pila vacía ---
+Captura esperada al hacer pop() en vacía: Error: La pila está vacía, no se puede realizar pop.
+Captura esperada al hacer peek() en vacía: Error: La pila está vacía, no se puede realizar peek.
+
+--- 2. Operaciones push (10, 20, 30, 40) ---
+Tope -> [40] -> [30] -> [20] -> [10] -> Base
+Tamaño actual: 4 | ¿Está vacía? false
+Elemento en el tope (peek): 40
+
+--- 3. Búsqueda de elementos (buscar) ---
+¿Existe el 30 en la pila? true
+¿Existe el 99 en la pila? false
+
+--- 4. Operaciones pop (comportamiento LIFO) ---
+Desapilado (pop): 40
+Tope -> [30] -> [20] -> [10] -> Base
+Nuevo tope (peek): 30
+Desapilado (pop): 30
+Tope -> [20] -> [10] -> Base
+
+--- 5. Vaciar completamente la pila ---
+Desapilando: 20 (tamaño restante: 1)
+Desapilando: 10 (tamaño restante: 0)
+Pila vacía: [ ]
+¿Está vacía al final? true | Tamaño final: 0
+
+Pruebas de Ejercicio 1 completadas con éxito.

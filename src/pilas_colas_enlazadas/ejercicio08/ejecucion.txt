@@ -1,0 +1,35 @@
+==================================================
+ EJERCICIO 8: INVERTIR PALABRA (PILA)
+==================================================
+
+Test #1:
+  Original : "algoritmo"
+  Invertido: "omtirogla"
+  Esperado : "omtirogla" | ¿Correcto?: true
+
+Test #2:
+  Original : "radar"
+  Invertido: "radar"
+  Esperado : "radar" | ¿Correcto?: true
+
+Test #3:
+  Original : "Java"
+  Invertido: "avaJ"
+  Esperado : "avaJ" | ¿Correcto?: true
+
+Test #4:
+  Original : "A"
+  Invertido: "A"
+  Esperado : "A" | ¿Correcto?: true
+
+Test #5:
+  Original : ""
+  Invertido: ""
+  Esperado : "" | ¿Correcto?: true
+
+Test #6:
+  Original : "estructuras de datos"
+  Invertido: "sotad ed sarutcurtse"
+  Esperado : "sotad ed sarutcurtse" | ¿Correcto?: true
+
+Todas las pruebas de inversión de palabras pasaron exitosamente.

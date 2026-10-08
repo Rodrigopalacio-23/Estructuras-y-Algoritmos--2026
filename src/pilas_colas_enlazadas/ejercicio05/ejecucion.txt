@@ -1,0 +1,41 @@
+==================================================
+ EJERCICIO 5: HISTORIAL DE NAVEGACIÓN (PILA)
+==================================================
+
+¿Historial vacío? true | Páginas: 0
+
+--- 1. Navegación por sitios web ---
+--- Historial de Navegación (Página actual arriba) ---
+  [ACTUAL] https://stackoverflow.com
+  [2] https://github.com
+  [3] https://wikipedia.org
+  [4] https://google.com
+-----------------------------------------------------
+Página actual: https://stackoverflow.com
+
+--- 2. Acción Retroceder (Volver atrás) ---
+Cerrando y retrocediendo de: https://stackoverflow.com
+Nueva página actual: https://github.com
+Cerrando y retrocediendo de: https://github.com
+Nueva página actual: https://wikipedia.org
+--- Historial de Navegación (Página actual arriba) ---
+  [ACTUAL] https://wikipedia.org
+  [2] https://google.com
+-----------------------------------------------------
+
+--- 3. Visitar una nueva página luego de retroceder ---
+--- Historial de Navegación (Página actual arriba) ---
+  [ACTUAL] https://docs.oracle.com
+  [2] https://wikipedia.org
+  [3] https://google.com
+-----------------------------------------------------
+Página actual: https://docs.oracle.com
+
+--- 4. Casos límite (retroceder hasta vaciar) ---
+Retrocediendo de: https://docs.oracle.com
+Retrocediendo de: https://wikipedia.org
+Retrocediendo de: https://google.com
+Captura esperada al retroceder sin páginas: Error: No hay historial de navegación para retroceder.
+Captura esperada al consultar página actual vacía: Error: No hay ninguna página abierta actualmente.
+
+Pruebas de Ejercicio 5 completadas con éxito.

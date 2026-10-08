@@ -1,0 +1,29 @@
+==================================================
+ EJERCICIO 7: PARÉNTESIS BALANCEADOS (PILA)
+==================================================
+
+Test #1: "(2 + 3) * (5 - 1)"
+  Resultado: true | Esperado: true | ¿Correcto?: true
+
+Test #2: "((a + b) * c)"
+  Resultado: true | Esperado: true | ¿Correcto?: true
+
+Test #3: "(2 + 3"
+  Resultado: false | Esperado: false | ¿Correcto?: true
+
+Test #4: "())("
+  Resultado: false | Esperado: false | ¿Correcto?: true
+
+Test #5: "a + b * c"
+  Resultado: true | Esperado: true | ¿Correcto?: true
+
+Test #6: ""
+  Resultado: true | Esperado: true | ¿Correcto?: true
+
+Test #7: "(((1 + 2)))"
+  Resultado: true | Esperado: true | ¿Correcto?: true
+
+Test #8: ")("
+  Resultado: false | Esperado: false | ¿Correcto?: true
+
+Todas las pruebas de validación de paréntesis pasaron exitosamente.

@@ -1,0 +1,24 @@
+==================================================
+ EJERCICIO 3: PILA ENLAZADA GENÉRICA Pila<T>
+==================================================
+
+--- 1. Prueba con tipo Integer ---
+Tope -> [30] -> [20] -> [10] -> Base
+Tope Integer: 30 | Desapilado: 30
+Tope -> [20] -> [10] -> Base
+
+--- 2. Prueba con tipo String ---
+Tope -> [tercero] -> [segundo] -> [primero] -> Base
+Tope String: tercero | Desapilado: tercero
+Tope -> [segundo] -> [primero] -> Base
+
+--- 3. Prueba con clase personalizada (Tarea) ---
+Tope -> [Tarea#3('Escribir pruebas unitarias', prio=2)] -> [Tarea#2('Implementar algoritmo', prio=3)] -> [Tarea#1('Configurar entorno', prio=1)] -> Base
+Tope Tarea: Tarea#3('Escribir pruebas unitarias', prio=2)
+Desapilado: Tarea#3('Escribir pruebas unitarias', prio=2)
+Tope -> [Tarea#2('Implementar algoritmo', prio=3)] -> [Tarea#1('Configurar entorno', prio=1)] -> Base
+
+--- 4. Casos límite en pila genérica vacía ---
+Captura esperada al hacer pop() en vacía: Error: La pila está vacía, no se puede realizar pop.
+
+Pruebas de Ejercicio 3 completadas con éxito.

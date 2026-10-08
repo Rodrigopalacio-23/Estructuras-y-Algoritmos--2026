@@ -1,0 +1,34 @@
+==================================================
+ EJERCICIO 2: COLA ENLAZADA DE ENTEROS
+==================================================
+
+¿Cola recién creada está vacía? true | Tamaño: 0
+Cola vacía: [ ]
+
+--- 1. Prueba de casos límite en cola vacía ---
+Captura esperada al hacer dequeue() en vacía: Error: La cola está vacía, no se puede realizar dequeue.
+Captura esperada al hacer peek() en vacía: Error: La cola está vacía, no se puede realizar peek.
+
+--- 2. Operaciones enqueue (100, 200, 300, 400) ---
+Frente -> [100] -> [200] -> [300] -> [400] -> Final
+Tamaño actual: 4 | ¿Está vacía? false
+Elemento al frente (peek): 100
+
+--- 3. Operaciones dequeue (comportamiento FIFO) ---
+Desencolado (dequeue): 100
+Frente -> [200] -> [300] -> [400] -> Final
+Nuevo frente (peek): 200
+Desencolado (dequeue): 200
+Frente -> [300] -> [400] -> Final
+
+--- 4. Vaciar la cola y verificar caso crítico de tail ---
+Desencolado: 300 (quedan 1)
+Desencolado último elemento: 400 (quedan 0)
+Cola vacía: [ ]
+¿Cola vacía? true
+
+--- 5. Reinserción tras vaciado (comprobación de integridad de tail) ---
+Frente -> [500] -> [600] -> Final
+Frente: 500 | Tamaño: 2
+
+Pruebas de Ejercicio 2 completadas con éxito.

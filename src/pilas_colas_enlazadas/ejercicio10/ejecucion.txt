@@ -1,0 +1,48 @@
+==================================================
+ EJERCICIO 10: LISTA DOBLEMENTE ENLAZADA GENÉRICA
+==================================================
+
+¿Lista vacía? true | Tamaño: 0
+
+--- 1. Inserciones al Inicio y al Final ---
+Recorrido hacia adelante (head -> tail):
+Head <-> [A] <-> [B] <-> [C] <-> [D] <-> [E] <-> Tail
+Recorrido hacia atrás (tail -> head):
+Tail <-> [E] <-> [D] <-> [C] <-> [B] <-> [A] <-> Head
+Tamaño actual: 5
+
+--- 2. Eliminación de un nodo intermedio ('C') ---
+¿Eliminado 'C'?: true
+Head <-> [A] <-> [B] <-> [D] <-> [E] <-> Tail
+Tail <-> [E] <-> [D] <-> [B] <-> [A] <-> Head
+
+--- 3. Eliminación del primer nodo ('A' = head) ---
+¿Eliminado 'A'?: true
+Head <-> [B] <-> [D] <-> [E] <-> Tail
+Tail <-> [E] <-> [D] <-> [B] <-> Head
+
+--- 4. Eliminación del último nodo ('E' = tail) ---
+¿Eliminado 'E'?: true
+Head <-> [B] <-> [D] <-> Tail
+Tail <-> [D] <-> [B] <-> Head
+
+--- 5. Intento de eliminar elemento inexistente ('Z') ---
+¿Eliminado 'Z'?: false (esperado: false)
+Tamaño actual: 2
+
+--- 6. Eliminación hasta lista vacía (caso nodo único) ---
+¿Eliminado 'B'?: true
+Head <-> [D] <-> Tail
+¿Eliminado 'D' (último que quedaba)?: true
+Lista vacía: [ ]
+Lista vacía: [ ]
+¿Lista vacía?: true | Tamaño: 0
+
+--- 7. Eliminación en lista ya vacía ---
+¿Eliminado en lista vacía?: false
+
+--- 8. Re-inserción posterior tras vaciado completo ---
+Head <-> [Primero] <-> [Segundo] <-> Tail
+Tail <-> [Segundo] <-> [Primero] <-> Head
+
+Pruebas de Ejercicio 10 completadas con éxito.

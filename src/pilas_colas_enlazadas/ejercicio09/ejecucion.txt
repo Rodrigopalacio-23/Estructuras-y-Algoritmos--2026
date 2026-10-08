@@ -1,0 +1,44 @@
+==================================================
+ EJERCICIO 9: COLA DE IMPRESIÓN (FIFO)
+==================================================
+
+¿Spooler vacío? true | Trabajos: 0
+
+--- 1. Envío de trabajos de impresión ---
+--- Cola de Impresión Spooler (Próximo al inicio) ---
+  1. Trabajo['tesis_final.pdf', 85 págs., usuario: estudiante1]
+  2. Trabajo['balance_anual.xlsx', 12 págs., usuario: contabilidad]
+  3. Trabajo['contrato_firmado.pdf', 4 págs., usuario: legales]
+  4. Trabajo['presentacion.pptx', 25 págs., usuario: marketing]
+Total trabajos: 4 | Total páginas acumuladas: 126
+-----------------------------------------------------
+Próximo trabajo a imprimir: Trabajo['tesis_final.pdf', 85 págs., usuario: estudiante1]
+
+--- 2. Procesamiento de impresiones (FIFO) ---
+Imprimiendo: Trabajo['tesis_final.pdf', 85 págs., usuario: estudiante1]
+Nuevo próximo: Trabajo['balance_anual.xlsx', 12 págs., usuario: contabilidad]
+Imprimiendo: Trabajo['balance_anual.xlsx', 12 págs., usuario: contabilidad]
+--- Cola de Impresión Spooler (Próximo al inicio) ---
+  1. Trabajo['contrato_firmado.pdf', 4 págs., usuario: legales]
+  2. Trabajo['presentacion.pptx', 25 págs., usuario: marketing]
+Total trabajos: 2 | Total páginas acumuladas: 29
+-----------------------------------------------------
+
+--- 3. Llegada de nuevo trabajo e impresión completa ---
+--- Cola de Impresión Spooler (Próximo al inicio) ---
+  1. Trabajo['contrato_firmado.pdf', 4 págs., usuario: legales]
+  2. Trabajo['presentacion.pptx', 25 págs., usuario: marketing]
+  3. Trabajo['manual_usuario.pdf', 40 págs., usuario: soporte]
+Total trabajos: 3 | Total páginas acumuladas: 69
+-----------------------------------------------------
+Imprimiendo: Trabajo['contrato_firmado.pdf', 4 págs., usuario: legales]
+Imprimiendo: Trabajo['presentacion.pptx', 25 págs., usuario: marketing]
+Imprimiendo: Trabajo['manual_usuario.pdf', 40 págs., usuario: soporte]
+Cola de impresión vacía. No hay trabajos pendientes.
+¿Spooler vacío al finalizar? true
+
+--- 4. Casos límite (imprimir con cola vacía) ---
+Captura esperada al imprimir en cola vacía: Error: No hay trabajos pendientes en la cola de impresión.
+Captura esperada al consultar próximo en cola vacía: Error: No hay trabajos pendientes en la cola de impresión.
+
+Pruebas de Ejercicio 9 completadas con éxito.

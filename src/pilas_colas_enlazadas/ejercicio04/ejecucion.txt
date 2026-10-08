@@ -1,0 +1,19 @@
+==================================================
+ EJERCICIO 4: COLA ENLAZADA GENÉRICA Cola<T>
+==================================================
+
+--- 1. Prueba con nombres (String) ---
+Frente -> [Ana] -> [Bruno] -> [Carlos] -> Final
+Frente: Ana | Desencolado: Ana
+Frente -> [Bruno] -> [Carlos] -> Final
+
+--- 2. Prueba con objetos Cliente ---
+Frente -> [Cliente(101, 'Lucía Méndez')] -> [Cliente(102, 'Martín Gómez')] -> [Cliente(103, 'Sofía Ramos')] -> Final
+Cliente al frente: Cliente(101, 'Lucía Méndez')
+Atendido (dequeue): Cliente(101, 'Lucía Méndez')
+Frente -> [Cliente(102, 'Martín Gómez')] -> [Cliente(103, 'Sofía Ramos')] -> Final
+
+--- 3. Casos límite en cola genérica vacía ---
+Captura esperada al hacer dequeue() en vacía: Error: La cola está vacía, no se puede realizar dequeue.
+
+Pruebas de Ejercicio 4 completadas con éxito.

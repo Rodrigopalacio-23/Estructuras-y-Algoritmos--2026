@@ -1,0 +1,42 @@
+==================================================
+ EJERCICIO 6: COLA DE BANCO (ATENCIÓN FIFO)
+==================================================
+
+¿Fila vacía? true | En espera: 0
+
+--- 1. Llegada de clientes a la fila ---
+--- Fila del Banco (Próximo a atender al inicio) ---
+  1. Turno #101 - Roberto Flores (Apertura de cuenta)
+  2. Turno #102 - María González (Cobro de jubilación)
+  3. Turno #103 - Esteban Quispe (Solicitud de crédito)
+  4. Turno #104 - Valeria Morales (Consulta de inversiones)
+----------------------------------------------------
+Próximo en ser llamado: Turno #101 - Roberto Flores (Apertura de cuenta)
+
+--- 2. Atención en ventanilla (FIFO) ---
+Atendiendo a: Turno #101 - Roberto Flores (Apertura de cuenta)
+Nuevo siguiente: Turno #102 - María González (Cobro de jubilación)
+Atendiendo a: Turno #102 - María González (Cobro de jubilación)
+--- Fila del Banco (Próximo a atender al inicio) ---
+  1. Turno #103 - Esteban Quispe (Solicitud de crédito)
+  2. Turno #104 - Valeria Morales (Consulta de inversiones)
+----------------------------------------------------
+Clientes restantes en espera: 2
+
+--- 3. Llegada de un nuevo cliente y atención total ---
+--- Fila del Banco (Próximo a atender al inicio) ---
+  1. Turno #103 - Esteban Quispe (Solicitud de crédito)
+  2. Turno #104 - Valeria Morales (Consulta de inversiones)
+  3. Turno #105 - Carlos Tevez (Depósito judicial)
+----------------------------------------------------
+Atendiendo a: Turno #103 - Esteban Quispe (Solicitud de crédito)
+Atendiendo a: Turno #104 - Valeria Morales (Consulta de inversiones)
+Atendiendo a: Turno #105 - Carlos Tevez (Depósito judicial)
+Fila vacía: No hay clientes en espera.
+¿Fila vacía tras el día? true
+
+--- 4. Casos límite (atender con fila vacía) ---
+Captura esperada al atender en fila vacía: Error: No hay clientes esperando en la fila.
+Captura esperada al consultar siguiente en fila vacía: Error: No hay clientes esperando en la fila.
+
+Pruebas de Ejercicio 6 completadas con éxito.
