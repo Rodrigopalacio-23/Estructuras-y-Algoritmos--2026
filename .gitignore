@@ -2,4 +2,12 @@
 bin/
 out/
 build/
+target/
 .vscode/
+.idea/
+*.iml
+
+# Carpetas excluidas para subir solo ejercicios
+src/
+scripts/
+Clases Estructura y Algoritmo/
