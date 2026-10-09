@@ -7,7 +7,10 @@ target/
 .idea/
 *.iml
 
-# Carpetas excluidas para subir solo ejercicios
+# Carpetas y archivos excluidos para subir solo ejercicios
 src/
 scripts/
 Clases Estructura y Algoritmo/
+Makefile
+checkstyle.xml
+pom.xml
