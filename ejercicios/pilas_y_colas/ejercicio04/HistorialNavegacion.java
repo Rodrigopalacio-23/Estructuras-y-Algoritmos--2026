@@ -2,6 +2,10 @@ package pilas_y_colas.ejercicio04;
 
 import java.util.Arrays;
 
+/**
+ * Modelo de historial de navegación web utilizando una Pila basada en arreglos (LIFO).
+ * Cada nueva visita apila una URL; retroceder desapila la página activa.
+ */
 public class HistorialNavegacion {
     private final String[] historial;
     private int tope;
@@ -16,6 +20,9 @@ public class HistorialNavegacion {
         this.tope = -1;
     }
 
+    /**
+     * Navega a una nueva URL apilándola en el historial en O(1).
+     */
     public void visitar(String url) {
         if (tope == capacidad - 1) {
             throw new IllegalStateException("Error: El historial está lleno (capacidad " + capacidad + "). No se puede visitar: " + url);
@@ -24,6 +31,9 @@ public class HistorialNavegacion {
         System.out.println("-> Navegando a: " + url);
     }
 
+    /**
+     * Retrocede a la página web anterior desapilando la actual en O(1).
+     */
     public String retroceder() {
         if (tope <= 0) {
             throw new IllegalStateException("Error: No es posible retroceder más. Estás en la primera página o el historial está vacío.");
@@ -34,6 +44,9 @@ public class HistorialNavegacion {
         return historial[tope];
     }
 
+    /**
+     * Retorna la página actualmente visualizada en O(1).
+     */
     public String paginaActual() {
         if (tope == -1) {
             throw new IllegalStateException("El historial está completamente vacío.");

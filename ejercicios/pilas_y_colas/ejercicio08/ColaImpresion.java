@@ -1,5 +1,9 @@
 package pilas_y_colas.ejercicio08;
 
+/**
+ * Simulación de cola de impresión (spooler) mediante una Cola FIFO.
+ * Los trabajos se imprimen en el orden cronológico exacto en que fueron enviados.
+ */
 public class ColaImpresion {
 
     public record Documento(String nombre, int paginas) {

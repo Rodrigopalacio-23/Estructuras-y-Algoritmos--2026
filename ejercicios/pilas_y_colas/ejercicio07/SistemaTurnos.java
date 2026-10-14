@@ -1,5 +1,9 @@
 package pilas_y_colas.ejercicio07;
 
+/**
+ * Sistema de emisión y atención de turnos bancarios mediante Cola FIFO.
+ * Los clientes son atendidos estrictamente por orden de llegada.
+ */
 public class SistemaTurnos {
 
     public record Turno(int numero, String nombreCliente) {
@@ -28,6 +32,9 @@ public class SistemaTurnos {
         this.contadorTurnos = 0;
     }
 
+    /**
+     * Emite un nuevo turno y encola al cliente al final de la fila en O(1).
+     */
     public Turno registrarPersona(String nombreCliente) {
         if (salaLlena()) {
             throw new IllegalStateException("Error: Sala de espera llena (capacidad " + capacidad + "). No se puede emitir turno para: " + nombreCliente);
@@ -40,6 +47,9 @@ public class SistemaTurnos {
         return nuevoTurno;
     }
 
+    /**
+     * Llama y atiende al siguiente cliente al frente de la fila en O(1).
+     */
     public Turno atenderSiguiente() {
         if (!hayPersonasEsperando()) {
             throw new IllegalStateException("Error: No hay clientes esperando en la fila.");

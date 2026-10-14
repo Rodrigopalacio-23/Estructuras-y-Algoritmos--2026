@@ -2,6 +2,10 @@ package pilas_y_colas.ejercicio06;
 
 import java.util.Arrays;
 
+/**
+ * Implementación de una Cola de números enteros utilizando un arreglo lineal (FIFO).
+ * El primer elemento en encolarse es el primero en desencolarse.
+ */
 public class ColaEnteros {
     private final int[] datos;
     private int front;

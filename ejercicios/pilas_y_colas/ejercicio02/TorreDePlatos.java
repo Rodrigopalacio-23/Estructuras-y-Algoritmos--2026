@@ -2,6 +2,10 @@ package pilas_y_colas.ejercicio02;
 
 import java.util.Arrays;
 
+/**
+ * Simulación de una Torre de Platos utilizando una estructura de Pila basada en arreglos (LIFO).
+ * El último plato en apilarse es siempre el primero en retirarse.
+ */
 public class TorreDePlatos {
     private final String[] platos;
     private int tope;
@@ -16,6 +20,10 @@ public class TorreDePlatos {
         this.tope = -1; // Torre vacía
     }
 
+    /**
+     * Apila un plato en la cima de la torre en O(1).
+     * @throws IllegalStateException si la torre está llena
+     */
     public void apilarPlato(String plato) {
         if (estaLlena()) {
             throw new IllegalStateException("Error: La torre de platos está llena (capacidad " + capacidad + "). No se puede agregar: " + plato);
@@ -24,6 +32,10 @@ public class TorreDePlatos {
         System.out.println("-> Se apiló: " + plato + " en la cima.");
     }
 
+    /**
+     * Retira el plato superior de la torre en O(1).
+     * @throws IllegalStateException si la torre está vacía
+     */
     public String retirarPlato() {
         if (estaVacia()) {
             throw new IllegalStateException("Error: La torre de platos está vacía. No hay platos para retirar.");
@@ -33,6 +45,9 @@ public class TorreDePlatos {
         return platoRetirado;
     }
 
+    /**
+     * Consulta el plato en la cima sin retirarlo en O(1).
+     */
     public String verPlatoSuperior() {
         if (estaVacia()) {
             throw new IllegalStateException("Error: La torre está vacía. No hay plato superior.");
