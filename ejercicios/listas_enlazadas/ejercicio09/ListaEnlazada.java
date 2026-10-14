@@ -1,38 +1,3 @@
-/*
-Prompt inicial utilizado:
-A partir de la ListaEnlazada anterior, quiero implementar un método para invertir el orden de los elementos in-place:
-void invertir()
-
-### Razonamiento Conceptual: Punteros Auxiliares y Orden Estricto de Actualización
-Para invertir la dirección de los enlaces de una lista enlazada simple sin memoria adicional (O(1) auxiliar y O(n) tiempo), se requieren 3 referencias auxiliares:
-- 'anterior': Inicializado en null (porque el nodo head original pasará a ser el último nodo, apuntando a null).
-- 'actual': Inicializado en head (el nodo que está siendo invertido en la iteración actual).
-- 'siguiente': Puntero temporal para resguardar la sublista derecha pendiente.
-
-### ¿Por qué el orden de actualización es fundamental?
-El algoritmo sigue este ciclo exacto de 4 pasos por cada nodo:
-1. siguiente = actual.getSiguiente();
-   Es OBLIGATORIO salvar la referencia al próximo nodo ANTES de alterar los enlaces.
-2. actual.setSiguiente(anterior);
-   Se invierte el puntero del nodo actual hacia atrás (apunta a 'anterior').
-   Si hubiéramos realizado este paso antes del paso 1, habríamos destruido el único camino existente hacia el resto de la lista, dejando huérfanos e inaccesibles a todos los nodos subsiguientes.
-3. anterior = actual;
-   Se avanza el puntero 'anterior' al nodo recién invertido.
-4. actual = siguiente;
-   Se avanza 'actual' hacia el nodo que habíamos resguardado en el paso 1.
-
-Al salir del bucle (cuando actual == null), 'anterior' apunta al último nodo de la lista original, el cual pasa a ser la nueva cabeza:
-head = anterior;
-
-### Casos a Contemplar
-- Lista vacía (head == null): no hace nada.
-- Lista con un solo nodo (head.getSiguiente() == null): queda idéntica.
-- Lista con múltiples nodos (ejemplo: 10 -> 20 -> 30 -> 40 -> null pasa a 40 -> 30 -> 20 -> 10 -> null).
-
-Ajustes realizados luego de la primera respuesta de OpenCode:
-Sin ajustes.
-*/
-
 package listas_enlazadas.ejercicio09;
 
 public class ListaEnlazada {
@@ -232,3 +197,37 @@ public class ListaEnlazada {
     }
 }
 
+/*
+Prompt inicial utilizado:
+A partir de la ListaEnlazada anterior, quiero implementar un método para invertir el orden de los elementos in-place:
+void invertir()
+
+### Razonamiento Conceptual: Punteros Auxiliares y Orden Estricto de Actualización
+Para invertir la dirección de los enlaces de una lista enlazada simple sin memoria adicional (O(1) auxiliar y O(n) tiempo), se requieren 3 referencias auxiliares:
+- 'anterior': Inicializado en null (porque el nodo head original pasará a ser el último nodo, apuntando a null).
+- 'actual': Inicializado en head (el nodo que está siendo invertido en la iteración actual).
+- 'siguiente': Puntero temporal para resguardar la sublista derecha pendiente.
+
+### ¿Por qué el orden de actualización es fundamental?
+El algoritmo sigue este ciclo exacto de 4 pasos por cada nodo:
+1. siguiente = actual.getSiguiente();
+   Es OBLIGATORIO salvar la referencia al próximo nodo ANTES de alterar los enlaces.
+2. actual.setSiguiente(anterior);
+   Se invierte el puntero del nodo actual hacia atrás (apunta a 'anterior').
+   Si hubiéramos realizado este paso antes del paso 1, habríamos destruido el único camino existente hacia el resto de la lista, dejando huérfanos e inaccesibles a todos los nodos subsiguientes.
+3. anterior = actual;
+   Se avanza el puntero 'anterior' al nodo recién invertido.
+4. actual = siguiente;
+   Se avanza 'actual' hacia el nodo que habíamos resguardado en el paso 1.
+
+Al salir del bucle (cuando actual == null), 'anterior' apunta al último nodo de la lista original, el cual pasa a ser la nueva cabeza:
+head = anterior;
+
+### Casos a Contemplar
+- Lista vacía (head == null): no hace nada.
+- Lista con un solo nodo (head.getSiguiente() == null): queda idéntica.
+- Lista con múltiples nodos (ejemplo: 10 -> 20 -> 30 -> 40 -> null pasa a 40 -> 30 -> 20 -> 10 -> null).
+
+Ajustes realizados luego de la primera respuesta de OpenCode:
+Sin ajustes.
+*/

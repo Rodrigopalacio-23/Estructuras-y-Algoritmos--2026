@@ -1,34 +1,3 @@
-/*
-Quiero implementar en Java una estructura de Pila genérica Pila<T> utilizando exclusivamente un arreglo interno (sin colecciones de Java como ArrayList o Stack).
-
-### Estructura y Arreglo Interno
-La clase Pila<T> debe contener un arreglo T[] elementos y un índice 'top'.
-Debido al mecanismo de supresión de tipos (Type Erasure) de Java, no es posible instanciar directamente 'new T[capacidad]'. Por ende, el arreglo interno se inicializa como (T[]) new Object[capacidad], aplicando @SuppressWarnings("unchecked") de forma controlada y segura.
-
-### Razonamiento: ¿Qué problema resuelven los genéricos y cómo se diferencian de una pila solo de int?
-1. Reusabilidad de Código: Una pila hecha puramente con 'int' solo sirve para números enteros. Si el sistema necesitara almacenar Strings, Doubles o entidades de dominio (por ejemplo Cliente o Tarea), nos veríamos obligados a duplicar el código creando PilaString, PilaDouble, etc.
-2. Type Safety (Seguridad de Tipos en Tiempo de Compilación):
-   - Si en lugar de genéricos utilizáramos Object[], se podrían mezclar tipos erróneos por accidente y se requeriría casting explícito (ej: (String) pila.pop()), lo que genera vulnerabilidad a errores de tiempo de ejecución (ClassCastException).
-   - Los genéricos <T> proporcionan verificación estática en tiempo de compilación: Pila<String> solo admite cadenas y Pila<Integer> solo admite números, garantizando código robusto sin necesidad de castings manuales en el código cliente.
-
-### Operaciones Requeridas
-- void push(T elemento): Agrega un elemento a la cima.
-- T pop(): Retira y devuelve el elemento de la cima, limpiando la referencia en memoria (Garbage Collection).
-- T peek(): Consulta la cima sin retirarla.
-- boolean isEmpty(), boolean isFull(), int size().
-
-### Casos Límite y Manejo de Errores
-- Pila llena: push() lanza IllegalStateException("Error: Pila llena (desbordamiento).").
-- Pila vacía: pop() y peek() lanzan IllegalStateException("Error: Pila vacía (subdesbordamiento).").
-
-### Casos de Prueba en Main
-Demostrar el uso de Pila<T> instanciándola con al menos 3 tipos de datos distintos:
-1. Pila<Integer> con números enteros.
-2. Pila<String> con palabras.
-3. Pila<Tarea> con una clase de dominio simple Tarea(String nombre, int prioridad).
-Probar en cada una operaciones de apilado, cima, desapilado y capturar excepciones de borde.
-*/
-
 package pilas_y_colas.ejercicio05;
 
 public class PilaGenerica {
@@ -169,7 +138,32 @@ public class PilaGenerica {
 }
 
 /*
-Ajustes al prompt:
-Sin ajustes.
-*/
+Quiero implementar en Java una estructura de Pila genérica Pila<T> utilizando exclusivamente un arreglo interno (sin colecciones de Java como ArrayList o Stack).
 
+### Estructura y Arreglo Interno
+La clase Pila<T> debe contener un arreglo T[] elementos y un índice 'top'.
+Debido al mecanismo de supresión de tipos (Type Erasure) de Java, no es posible instanciar directamente 'new T[capacidad]'. Por ende, el arreglo interno se inicializa como (T[]) new Object[capacidad], aplicando @SuppressWarnings("unchecked") de forma controlada y segura.
+
+### Razonamiento: ¿Qué problema resuelven los genéricos y cómo se diferencian de una pila solo de int?
+1. Reusabilidad de Código: Una pila hecha puramente con 'int' solo sirve para números enteros. Si el sistema necesitara almacenar Strings, Doubles o entidades de dominio (por ejemplo Cliente o Tarea), nos veríamos obligados a duplicar el código creando PilaString, PilaDouble, etc.
+2. Type Safety (Seguridad de Tipos en Tiempo de Compilación):
+   - Si en lugar de genéricos utilizáramos Object[], se podrían mezclar tipos erróneos por accidente y se requeriría casting explícito (ej: (String) pila.pop()), lo que genera vulnerabilidad a errores de tiempo de ejecución (ClassCastException).
+   - Los genéricos <T> proporcionan verificación estática en tiempo de compilación: Pila<String> solo admite cadenas y Pila<Integer> solo admite números, garantizando código robusto sin necesidad de castings manuales en el código cliente.
+
+### Operaciones Requeridas
+- void push(T elemento): Agrega un elemento a la cima.
+- T pop(): Retira y devuelve el elemento de la cima, limpiando la referencia en memoria (Garbage Collection).
+- T peek(): Consulta la cima sin retirarla.
+- boolean isEmpty(), boolean isFull(), int size().
+
+### Casos Límite y Manejo de Errores
+- Pila llena: push() lanza IllegalStateException("Error: Pila llena (desbordamiento).").
+- Pila vacía: pop() y peek() lanzan IllegalStateException("Error: Pila vacía (subdesbordamiento).").
+
+### Casos de Prueba en Main
+Demostrar el uso de Pila<T> instanciándola con al menos 3 tipos de datos distintos:
+1. Pila<Integer> con números enteros.
+2. Pila<String> con palabras.
+3. Pila<Tarea> con una clase de dominio simple Tarea(String nombre, int prioridad).
+Probar en cada una operaciones de apilado, cima, desapilado y capturar excepciones de borde.
+*/

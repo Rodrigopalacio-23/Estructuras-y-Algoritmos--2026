@@ -1,28 +1,3 @@
-/*
-Quiero implementar en Java un simulador de una Torre de Platos (TorreDePlatos) utilizando una estructura de Pila basada en arreglos.
-
-### Estructura y Arreglo Interno
-La clase debe gestionar un arreglo de cadenas String[] platos (o identificadores de platos) y un índice 'tope' que señale el plato superior de la torre.
-
-### Razonamiento: ¿Por qué se resuelve con una Pila (LIFO) y no con una Cola (FIFO)?
-En el mundo real, al apilar platos, cada nuevo plato se coloca en la cima de la torre. El único plato accesible para ser retirado de manera segura y sin derrumbar la torre es el que está en la parte superior, es decir, el ÚLTIMO que fue colocado.
-- Una Pila modela exactamente el principio LIFO (Last-In, First-Out): el último plato apilado es el primero en retirarse.
-- Una Cola (FIFO - First-In, First-Out) pretendería retirar primero el plato ubicado en la base de la torre, lo cual físicamente requeriría levantar o romper todos los platos que están encima. Por ello, la estructura adecuada es intrínsecamente una Pila.
-
-### Operaciones Requeridas
-- void apilarPlato(String plato): Agrega un plato en la cima de la torre.
-- String retirarPlato(): Retira y devuelve el plato superior.
-- String verPlatoSuperior(): Consulta cuál es el plato que está en la cima sin retirarlo.
-- boolean estaVacia() y boolean estaLlena().
-
-### Casos Límite y Manejo de Errores
-- Torre llena: Si la torre alcanza su capacidad máxima y se intenta agregar otro plato, se lanza IllegalStateException("Error: La torre de platos está llena, riesgo de caída.").
-- Torre vacía: Si no hay platos e intentamos retirar o consultar el plato superior, se lanza IllegalStateException("Error: La torre de platos está vacía.").
-
-### Casos de Prueba en Main
-Crear una torre de capacidad 4. Apilar 3 platos ("Plato Rojo", "Plato Azul", "Plato Blanco"). Consultar el plato superior. Apilar un cuarto plato ("Plato Dorado") para llenarla. Intentar apilar en torre llena capturando el error. Retirar platos uno por uno mostrando el orden LIFO. Intentar retirar de una torre vacía.
-*/
-
 package pilas_y_colas.ejercicio02;
 
 import java.util.Arrays;
@@ -133,7 +108,27 @@ public class TorreDePlatos {
 }
 
 /*
-Ajustes al prompt:
-Sin ajustes.
-*/
+Prompt inicial utilizado:
+Quiero implementar en Java un simulador de una Torre de Platos (TorreDePlatos) utilizando una estructura de Pila basada en arreglos.
 
+### Estructura y Arreglo Interno
+La clase debe gestionar un arreglo de cadenas String[] platos (o identificadores de platos) y un índice 'tope' que señale el plato superior de la torre.
+
+### Razonamiento: ¿Por qué se resuelve con una Pila (LIFO) y no con una Cola (FIFO)?
+En el mundo real, al apilar platos, cada nuevo plato se coloca en la cima de la torre. El único plato accesible para ser retirado de manera segura y sin derrumbar la torre es el que está en la parte superior, es decir, el ÚLTIMO que fue colocado.
+- Una Pila modela exactamente el principio LIFO (Last-In, First-Out): el último plato apilado es el primero en retirarse.
+- Una Cola (FIFO - First-In, First-Out) pretendería retirar primero el plato ubicado en la base de la torre, lo cual físicamente requeriría levantar o romper todos los platos que están encima. Por ello, la estructura adecuada es intrínsecamente una Pila.
+
+### Operaciones Requeridas
+- void apilarPlato(String plato): Agrega un plato en la cima de la torre.
+- String retirarPlato(): Retira y devuelve el plato superior.
+- String verPlatoSuperior(): Consulta cuál es el plato que está en la cima sin retirarlo.
+- boolean estaVacia() y boolean estaLlena().
+
+### Casos Límite y Manejo de Errores
+- Torre llena: Si la torre alcanza su capacidad máxima y se intenta agregar otro plato, se lanza IllegalStateException("Error: La torre de platos está llena, riesgo de caída.").
+- Torre vacía: Si no hay platos e intentamos retirar o consultar el plato superior, se lanza IllegalStateException("Error: La torre de platos está vacía.").
+
+### Casos de Prueba en Main
+Crear una torre de capacidad 4. Apilar 3 platos ("Plato Rojo", "Plato Azul", "Plato Blanco"). Consultar el plato superior. Apilar un cuarto plato ("Plato Dorado") para llenarla. Intentar apilar en torre llena capturando el error. Retirar platos uno por uno mostrando el orden LIFO. Intentar retirar de una torre vacía.
+*/

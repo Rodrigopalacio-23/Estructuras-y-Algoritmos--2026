@@ -1,35 +1,3 @@
-/*
-Prompt inicial utilizado:
-Quiero convertir la implementación de ListaEnlazada simple de enteros en una versión completamente genérica:
-ListaEnlazada<T> y Nodo<T>
-La lista debe funcionar con distintos tipos de datos:
-- ListaEnlazada<Integer>
-- ListaEnlazada<String>
-- ListaEnlazada<Alumno> (con una clase de dominio Alumno con legajo, nombre y promedio)
-
-### Razonamiento Conceptual: Qué cambia y qué se mantiene igual
-1. ¿Qué partes del código cambian?:
-   - Parámetros de tipo y firmas: El tipo primitivo 'int' es reemplazado por la variable de tipo genérico 'T' tanto en los nodos (Nodo<T>), como en los atributos y firmas de métodos (insertarAlInicio(T dato), T obtener(int posicion), etc.).
-   - Comparaciones de igualdad: Para comparar objetos genéricos en 'buscar(T dato)', 'eliminar(T dato)' o 'contarOcurrencias(T dato)', NO se puede usar el operador '==' (que compararía igualdad de referencias en memoria). Es obligatorio emplear 'java.util.Objects.equals(actual.getDato(), dato)' o 'actual.getDato().equals(dato)', garantizando comparación semántica y soporte seguro ante nulos.
-2. ¿Qué se mantiene estrictamente igual?:
-   - Absolutamente toda la lógica estructural y algorítmica:
-     * La inicialización de head y el enlace autorreferencial Nodo<T> siguiente.
-     * El orden de inserción: nuevo.setSiguiente(actual.getSiguiente()); actual.setSiguiente(nuevo).
-     * El orden de eliminación: anterior.setSiguiente(actual.getSiguiente()).
-     * El algoritmo de inversión in-situ con tres punteros (anterior, actual, siguiente).
-   - Esto demuestra la separación entre la estructura de datos (el contenedor enlazado) y el tipo de dato que contiene (el contenido o payload). La topología enlazada es agnóstica respecto al tipo de información que transporta.
-
-### Métodos a Incluir
-- insertarAlInicio(T dato), insertarAlFinal(T dato), insertarEnPosicion(T dato, int posicion)
-- boolean eliminar(T dato), void eliminarEnPosicion(int posicion)
-- void modificar(int posicion, T nuevoDato)
-- T obtener(int posicion), boolean buscar(T dato), int contarOcurrencias(T dato)
-- void invertir(), void imprimir(), boolean estaVacia(), int getSize()
-
-Ajustes realizados luego de la primera respuesta de OpenCode:
-Sin ajustes.
-*/
-
 package listas_enlazadas.ejercicio10;
 
 import java.util.Objects;
@@ -218,3 +186,34 @@ public class ListaEnlazada<T> {
     }
 }
 
+/*
+Prompt inicial utilizado:
+Quiero convertir la implementación de ListaEnlazada simple de enteros en una versión completamente genérica:
+ListaEnlazada<T> y Nodo<T>
+La lista debe funcionar con distintos tipos de datos:
+- ListaEnlazada<Integer>
+- ListaEnlazada<String>
+- ListaEnlazada<Alumno> (con una clase de dominio Alumno con legajo, nombre y promedio)
+
+### Razonamiento Conceptual: Qué cambia y qué se mantiene igual
+1. ¿Qué partes del código cambian?:
+   - Parámetros de tipo y firmas: El tipo primitivo 'int' es reemplazado por la variable de tipo genérico 'T' tanto en los nodos (Nodo<T>), como en los atributos y firmas de métodos (insertarAlInicio(T dato), T obtener(int posicion), etc.).
+   - Comparaciones de igualdad: Para comparar objetos genéricos en 'buscar(T dato)', 'eliminar(T dato)' o 'contarOcurrencias(T dato)', NO se puede usar el operador '==' (que compararía igualdad de referencias en memoria). Es obligatorio emplear 'java.util.Objects.equals(actual.getDato(), dato)' o 'actual.getDato().equals(dato)', garantizando comparación semántica y soporte seguro ante nulos.
+2. ¿Qué se mantiene estrictamente igual?:
+   - Absolutamente toda la lógica estructural y algorítmica:
+     * La inicialización de head y el enlace autorreferencial Nodo<T> siguiente.
+     * El orden de inserción: nuevo.setSiguiente(actual.getSiguiente()); actual.setSiguiente(nuevo).
+     * El orden de eliminación: anterior.setSiguiente(actual.getSiguiente()).
+     * El algoritmo de inversión in-situ con tres punteros (anterior, actual, siguiente).
+   - Esto demuestra la separación entre la estructura de datos (el contenedor enlazado) y el tipo de dato que contiene (el contenido o payload). La topología enlazada es agnóstica respecto al tipo de información que transporta.
+
+### Métodos a Incluir
+- insertarAlInicio(T dato), insertarAlFinal(T dato), insertarEnPosicion(T dato, int posicion)
+- boolean eliminar(T dato), void eliminarEnPosicion(int posicion)
+- void modificar(int posicion, T nuevoDato)
+- T obtener(int posicion), boolean buscar(T dato), int contarOcurrencias(T dato)
+- void invertir(), void imprimir(), boolean estaVacia(), int getSize()
+
+Ajustes realizados luego de la primera respuesta de OpenCode:
+Sin ajustes.
+*/

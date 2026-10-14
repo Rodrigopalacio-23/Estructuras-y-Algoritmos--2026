@@ -1,26 +1,3 @@
-/*
-Quiero implementar en Java una función recursiva que sume todos los dígitos de un número entero positivo n.
-
-Este problema puede resolverse recursivamente porque la suma de los dígitos de cualquier número n puede descomponerse en el valor de su último dígito sumado a la suma de los dígitos del número restante. El último dígito se obtiene con la operación de módulo (n % 10) y el número restante se reduce mediante la división entera (n / 10).
-
-El caso base es cuando n es menor que 10 (n < 10), porque cuando el número consta de un solo dígito, su suma es trivialmente el mismo número (n). En este punto se retorna n directamente y se detiene la recursión.
-
-El caso recursivo es (n % 10) + sumarDigitos(n / 10), porque en cada llamada se aísla el último dígito con n % 10 y se reduce el problema pasando n / 10 a la siguiente llamada recursiva.
-
-Los resultados se combinan sumando el dígito extraído (n % 10) con el valor retornado por la llamada recursiva sumarDigitos(n / 10) a medida que la pila de llamadas se desapila.
-
-La función debe devolver un número entero (int) con la suma acumulada de todos los dígitos de n.
-
-Quiero que el código tenga comentarios explicando el caso base, el caso recursivo y la pila de llamadas.
-
-También quiero probarlo con estos casos:
-- caso 1: n = 5 (un solo dígito, caso base directo, resultado 5)
-- caso 2: n = 42 (4 + 2 = 6)
-- caso 3: n = 345 (3 + 4 + 5 = 12)
-- caso 4: n = 12345 (1 + 2 + 3 + 4 + 5 = 15)
-- caso 5: n = 9999 (9 + 9 + 9 + 9 = 36)
-*/
-
 package recursividad;
 
 public class Ejercicio07SumarDigitos {
@@ -76,3 +53,26 @@ public class Ejercicio07SumarDigitos {
     }
 }
 
+/*
+Prompt inicial utilizado:
+Quiero implementar en Java una función recursiva que sume todos los dígitos de un número entero positivo n.
+
+Este problema puede resolverse recursivamente porque la suma de los dígitos de cualquier número n puede descomponerse en el valor de su último dígito sumado a la suma de los dígitos del número restante. El último dígito se obtiene con la operación de módulo (n % 10) y el número restante se reduce mediante la división entera (n / 10).
+
+El caso base es cuando n es menor que 10 (n < 10), porque cuando el número consta de un solo dígito, su suma es trivialmente el mismo número (n). En este punto se retorna n directamente y se detiene la recursión.
+
+El caso recursivo es (n % 10) + sumarDigitos(n / 10), porque en cada llamada se aísla el último dígito con n % 10 y se reduce el problema pasando n / 10 a la siguiente llamada recursiva.
+
+Los resultados se combinan sumando el dígito extraído (n % 10) con el valor retornado por la llamada recursiva sumarDigitos(n / 10) a medida que la pila de llamadas se desapila.
+
+La función debe devolver un número entero (int) con la suma acumulada de todos los dígitos de n.
+
+Quiero que el código tenga comentarios explicando el caso base, el caso recursivo y la pila de llamadas.
+
+También quiero probarlo con estos casos:
+- caso 1: n = 5 (un solo dígito, caso base directo, resultado 5)
+- caso 2: n = 42 (4 + 2 = 6)
+- caso 3: n = 345 (3 + 4 + 5 = 12)
+- caso 4: n = 12345 (1 + 2 + 3 + 4 + 5 = 15)
+- caso 5: n = 9999 (9 + 9 + 9 + 9 = 36)
+*/

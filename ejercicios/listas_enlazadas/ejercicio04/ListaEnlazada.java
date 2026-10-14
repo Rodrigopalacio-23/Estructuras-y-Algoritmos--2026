@@ -1,29 +1,3 @@
-/*
-Prompt inicial utilizado:
-A partir de la ListaEnlazada anterior, quiero implementar el método para insertar un elemento en cualquier posición válida:
-void insertarEnPosicion(int dato, int posicion)
-
-### Razonamiento Conceptual: Orden de Actualización de Referencias
-Para insertar un nuevo nodo entre dos nodos existentes ('actual' y 'actual.getSiguiente()'):
-1. Orden Correcto:
-   nuevo.setSiguiente(actual.getSiguiente());
-   actual.setSiguiente(nuevo);
-   - Primero conectamos el nuevo nodo con el resto de la lista para asegurar el enlace hacia adelante.
-   - Luego redirigimos el nodo anterior ('actual') hacia el nuevo nodo.
-2. ¿Qué ocurre si se invierte el orden?:
-   Si hiciéramos primero: actual.setSiguiente(nuevo);
-   Sobrescribiríamos el puntero que apunta al resto de la lista. En ese momento, se pierde para siempre la referencia a la subcadena siguiente (los nodos posteriores quedan huérfanos e inaccesibles). Si luego hiciéramos nuevo.setSiguiente(actual.getSiguiente()), conectaríamos 'nuevo' consigo mismo (creando un ciclo o bucle infinito) y destruyendo el resto de la lista. Por esta razón, el orden es estricto y no conmutable.
-
-### Casos a Contemplar
-- Posición inválida (posicion < 0 o posicion > size): Lanzar IndexOutOfBoundsException.
-- Insertar al inicio (posicion == 0): Llama a insertarAlInicio(dato) para actualizar head correctamente.
-- Insertar al final (posicion == size): Llama a insertarAlFinal(dato).
-- Insertar en el medio (0 < posicion < size): Se avanza hasta la posición 'posicion - 1' y se aplican las dos sentencias en el orden correcto, incrementando size en 1.
-
-Ajustes realizados luego de la primera respuesta de OpenCode:
-Sin ajustes.
-*/
-
 package listas_enlazadas.ejercicio04;
 
 public class ListaEnlazada {
@@ -145,3 +119,28 @@ public class ListaEnlazada {
     }
 }
 
+/*
+Prompt inicial utilizado:
+A partir de la ListaEnlazada anterior, quiero implementar el método para insertar un elemento en cualquier posición válida:
+void insertarEnPosicion(int dato, int posicion)
+
+### Razonamiento Conceptual: Orden de Actualización de Referencias
+Para insertar un nuevo nodo entre dos nodos existentes ('actual' y 'actual.getSiguiente()'):
+1. Orden Correcto:
+   nuevo.setSiguiente(actual.getSiguiente());
+   actual.setSiguiente(nuevo);
+   - Primero conectamos el nuevo nodo con el resto de la lista para asegurar el enlace hacia adelante.
+   - Luego redirigimos el nodo anterior ('actual') hacia el nuevo nodo.
+2. ¿Qué ocurre si se invierte el orden?:
+   Si hiciéramos primero: actual.setSiguiente(nuevo);
+   Sobrescribiríamos el puntero que apunta al resto de la lista. En ese momento, se pierde para siempre la referencia a la subcadena siguiente (los nodos posteriores quedan huérfanos e inaccesibles). Si luego hiciéramos nuevo.setSiguiente(actual.getSiguiente()), conectaríamos 'nuevo' consigo mismo (creando un ciclo o bucle infinito) y destruyendo el resto de la lista. Por esta razón, el orden es estricto y no conmutable.
+
+### Casos a Contemplar
+- Posición inválida (posicion < 0 o posicion > size): Lanzar IndexOutOfBoundsException.
+- Insertar al inicio (posicion == 0): Llama a insertarAlInicio(dato) para actualizar head correctamente.
+- Insertar al final (posicion == size): Llama a insertarAlFinal(dato).
+- Insertar en el medio (0 < posicion < size): Se avanza hasta la posición 'posicion - 1' y se aplican las dos sentencias en el orden correcto, incrementando size en 1.
+
+Ajustes realizados luego de la primera respuesta de OpenCode:
+Sin ajustes.
+*/

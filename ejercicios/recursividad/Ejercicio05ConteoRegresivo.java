@@ -1,22 +1,3 @@
-/*
-Quiero implementar en Java una función recursiva que imprima en consola un conteo regresivo desde n hasta 0.
-
-Este problema puede resolverse recursivamente porque imprimir los números desde n hasta 0 consiste en imprimir el número actual n y luego resolver la misma tarea para los números desde n - 1 hasta 0.
-
-Que la función no devuelva un valor (tipo de retorno void) significa que su propósito es generar un efecto colateral (side-effect), en este caso la impresión secuencial por pantalla, en lugar de calcular y propagar un resultado aritmético a través de la pila de retornos.
-
-El caso base es cuando n llega a 0 (o n < 0), imprimiendo 0 y retornando (return) sin hacer llamadas recursivas posteriores, cortando el flujo de ejecución.
-
-El algoritmo se acerca al caso base pasando n - 1 como argumento en cada llamada recursiva (conteoRegresivo(n - 1)).
-
-Si en lugar de n - 1 se usara n + 1, el valor de n se incrementaría indefinidamente (alejándose de 0), la condición de corte n == 0 nunca se cumpliría y el programa caería en una recursión infinita, agotando la memoria reservada para la pila de ejecución y lanzando un error java.lang.StackOverflowError.
-
-Quiero que el código tenga comentarios explicando el caso base, el caso recursivo y la pila de llamadas, y un método main que pruebe la ejecución con diferentes valores iniciales:
-- caso 1: n = 0 (caso base inmediato: imprime solo 0)
-- caso 2: n = 3 (imprime: 3 2 1 0)
-- caso 3: n = 5 (imprime: 5 4 3 2 1 0)
-*/
-
 package recursividad;
 
 public class Ejercicio05ConteoRegresivo {
@@ -76,3 +57,22 @@ public class Ejercicio05ConteoRegresivo {
     }
 }
 
+/*
+Prompt inicial utilizado:
+Quiero implementar en Java una función recursiva que imprima en consola un conteo regresivo desde n hasta 0.
+
+Este problema puede resolverse recursivamente porque imprimir los números desde n hasta 0 consiste en imprimir el número actual n y luego resolver la misma tarea para los números desde n - 1 hasta 0.
+
+Que la función no devuelva un valor (tipo de retorno void) significa que su propósito es generar un efecto colateral (side-effect), en este caso la impresión secuencial por pantalla, en lugar de calcular y propagar un resultado aritmético a través de la pila de retornos.
+
+El caso base es cuando n llega a 0 (o n < 0), imprimiendo 0 y retornando (return) sin hacer llamadas recursivas posteriores, cortando el flujo de ejecución.
+
+El algoritmo se acerca al caso base pasando n - 1 como argumento en cada llamada recursiva (conteoRegresivo(n - 1)).
+
+Si en lugar de n - 1 se usara n + 1, el valor de n se incrementaría indefinidamente (alejándose de 0), la condición de corte n == 0 nunca se cumpliría y el programa caería en una recursión infinita, agotando la memoria reservada para la pila de ejecución y lanzando un error java.lang.StackOverflowError.
+
+Quiero que el código tenga comentarios explicando el caso base, el caso recursivo y la pila de llamadas, y un método main que pruebe la ejecución con diferentes valores iniciales:
+- caso 1: n = 0 (caso base inmediato: imprime solo 0)
+- caso 2: n = 3 (imprime: 3 2 1 0)
+- caso 3: n = 5 (imprime: 5 4 3 2 1 0)
+*/

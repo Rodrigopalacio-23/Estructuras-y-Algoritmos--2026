@@ -1,30 +1,3 @@
-/*
-Prompt inicial utilizado:
-Quiero implementar en Java una estructura de Pila Enlazada de números enteros (PilaEnlazada) desde cero, utilizando nodos enlazados simples y sin utilizar ninguna clase de la Java Collections Framework (como Stack, ArrayList, LinkedList, etc.).
-
-### Estructura de Clases y Nodos
-- Clase Nodo: almacena el dato (int) y la referencia al siguiente nodo ('siguiente').
-- Clase PilaEnlazada: mantiene la referencia 'head' (tope de la pila) y el contador 'size' con la cantidad de elementos almacenados.
-
-### Razonamiento Conceptual: Pila LIFO y Complejidades
-- Comportamiento LIFO: El último elemento en entrar es el primero en salir.
-- Eficiencia O(1) en push() y pop(): Se logra manipulando exclusivamente la cabecera ('head'). Al insertar (push), el nuevo nodo apunta al actual 'head' y pasa a ser la nueva cima. Al desapilar (pop), se obtiene el valor de 'head' y se avanza la cima hacia 'head.getSiguiente()'. Ninguna de estas dos operaciones requiere recorrer la estructura, garantizando O(1) temporal y O(1) espacial adicional.
-- Búsqueda e impresión O(n): Operaciones como 'buscar(int elemento)' e 'imprimir()' requieren recorrer secuencialmente los nodos desde la cima hasta la base, requiriendo un tiempo O(n) proporcional a la cantidad de nodos.
-- Manejo de casos especiales: En caso de invocar pop() o peek() sobre una pila vacía, se debe lanzar una excepción descriptiva (IllegalStateException o NoSuchElementException).
-
-### Operaciones Requeridas
-- void push(int elemento): apila un entero en la cima.
-- int pop(): desapila y retorna el entero de la cima; lanza excepción si está vacía.
-- int peek(): consulta y retorna el elemento en la cima sin removerlo; lanza excepción si está vacía.
-- boolean estaVacia(): indica si la pila no tiene elementos.
-- int getSize(): retorna el número total de elementos.
-- boolean buscar(int elemento): retorna true si el elemento se encuentra en la pila, recorriéndola.
-- void imprimir(): muestra los elementos de la pila desde el tope hasta la base.
-
-Ajustes realizados luego de la primera respuesta de OpenCode:
-Sin ajustes.
-*/
-
 package pilas_colas_enlazadas.ejercicio01;
 
 import java.util.NoSuchElementException;
@@ -122,3 +95,29 @@ public class PilaEnlazada {
     }
 }
 
+/*
+Prompt inicial utilizado:
+Quiero implementar en Java una estructura de Pila Enlazada de números enteros (PilaEnlazada) desde cero, utilizando nodos enlazados simples y sin utilizar ninguna clase de la Java Collections Framework (como Stack, ArrayList, LinkedList, etc.).
+
+### Estructura de Clases y Nodos
+- Clase Nodo: almacena el dato (int) y la referencia al siguiente nodo ('siguiente').
+- Clase PilaEnlazada: mantiene la referencia 'head' (tope de la pila) y el contador 'size' con la cantidad de elementos almacenados.
+
+### Razonamiento Conceptual: Pila LIFO y Complejidades
+- Comportamiento LIFO: El último elemento en entrar es el primero en salir.
+- Eficiencia O(1) en push() y pop(): Se logra manipulando exclusivamente la cabecera ('head'). Al insertar (push), el nuevo nodo apunta al actual 'head' y pasa a ser la nueva cima. Al desapilar (pop), se obtiene el valor de 'head' y se avanza la cima hacia 'head.getSiguiente()'. Ninguna de estas dos operaciones requiere recorrer la estructura, garantizando O(1) temporal y O(1) espacial adicional.
+- Búsqueda e impresión O(n): Operaciones como 'buscar(int elemento)' e 'imprimir()' requieren recorrer secuencialmente los nodos desde la cima hasta la base, requiriendo un tiempo O(n) proporcional a la cantidad de nodos.
+- Manejo de casos especiales: En caso de invocar pop() o peek() sobre una pila vacía, se debe lanzar una excepción descriptiva (IllegalStateException o NoSuchElementException).
+
+### Operaciones Requeridas
+- void push(int elemento): apila un entero en la cima.
+- int pop(): desapila y retorna el entero de la cima; lanza excepción si está vacía.
+- int peek(): consulta y retorna el elemento en la cima sin removerlo; lanza excepción si está vacía.
+- boolean estaVacia(): indica si la pila no tiene elementos.
+- int getSize(): retorna el número total de elementos.
+- boolean buscar(int elemento): retorna true si el elemento se encuentra en la pila, recorriéndola.
+- void imprimir(): muestra los elementos de la pila desde el tope hasta la base.
+
+Ajustes realizados luego de la primera respuesta de OpenCode:
+Sin ajustes.
+*/

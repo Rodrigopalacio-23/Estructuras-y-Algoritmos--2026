@@ -1,24 +1,3 @@
-/*
-Quiero implementar en Java una función recursiva que sume los números enteros desde n hasta 1 (o sea, 1 + 2 + ... + n).
-
-Este problema puede resolverse recursivamente porque la suma de los primeros n números naturales equivale a tomar el número n y sumarle el resultado de la suma de los primeros n - 1 números, es decir, suma(n) = n + suma(n - 1).
-
-El caso más simple (caso base) es cuando n es 0 (n == 0), porque la suma de cero elementos es 0 (elemento neutro de la adición). Si n es 0, la función debe devolver 0 inmediatamente y detener la recursión. Si n es 1, n + suma(0) devolverá 1 + 0 = 1, resultando consistente.
-
-El caso recursivo es n + suma(n - 1), porque en cada llamada el valor de n disminuye en 1, reduciendo el problema hasta llegar a n == 0.
-
-La función debe devolver un número entero (int o long) con el total acumulado de la suma desde n hasta 1.
-
-Quiero que el código tenga comentarios explicando el caso base, el caso recursivo y la pila de llamadas, mostrando cómo se van acumulando las sumas pendientes al desapilar.
-
-Para validar que la función funciona correctamente, quiero comparar su resultado contra la fórmula matemática cerrada de Gauss: n * (n + 1) / 2 en todos los casos de prueba:
-- caso 1: n = 0 (caso base, resultado 0)
-- caso 2: n = 1 (resultado 1)
-- caso 3: n = 5 (5 + 4 + 3 + 2 + 1 = 15, validado con 5*6/2 = 15)
-- caso 4: n = 10 (10 + ... + 1 = 55, validado con 10*11/2 = 55)
-- caso 5: n = 100 (resultado 5050, validado con 100*101/2 = 5050)
-*/
-
 package recursividad;
 
 public class Ejercicio02SumaN {
@@ -81,3 +60,24 @@ public class Ejercicio02SumaN {
     }
 }
 
+/*
+Prompt inicial utilizado:
+Quiero implementar en Java una función recursiva que sume los números enteros desde n hasta 1 (o sea, 1 + 2 + ... + n).
+
+Este problema puede resolverse recursivamente porque la suma de los primeros n números naturales equivale a tomar el número n y sumarle el resultado de la suma de los primeros n - 1 números, es decir, suma(n) = n + suma(n - 1).
+
+El caso más simple (caso base) es cuando n es 0 (n == 0), porque la suma de cero elementos es 0 (elemento neutro de la adición). Si n es 0, la función debe devolver 0 inmediatamente y detener la recursión. Si n es 1, n + suma(0) devolverá 1 + 0 = 1, resultando consistente.
+
+El caso recursivo es n + suma(n - 1), porque en cada llamada el valor de n disminuye en 1, reduciendo el problema hasta llegar a n == 0.
+
+La función debe devolver un número entero (int o long) con el total acumulado de la suma desde n hasta 1.
+
+Quiero que el código tenga comentarios explicando el caso base, el caso recursivo y la pila de llamadas, mostrando cómo se van acumulando las sumas pendientes al desapilar.
+
+Para validar que la función funciona correctamente, quiero comparar su resultado contra la fórmula matemática cerrada de Gauss: n * (n + 1) / 2 en todos los casos de prueba:
+- caso 1: n = 0 (caso base, resultado 0)
+- caso 2: n = 1 (resultado 1)
+- caso 3: n = 5 (5 + 4 + 3 + 2 + 1 = 15, validado con 5*6/2 = 15)
+- caso 4: n = 10 (10 + ... + 1 = 55, validado con 10*11/2 = 55)
+- caso 5: n = 100 (resultado 5050, validado con 100*101/2 = 5050)
+*/

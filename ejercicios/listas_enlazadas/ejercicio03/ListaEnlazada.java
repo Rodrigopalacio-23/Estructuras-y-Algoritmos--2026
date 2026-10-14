@@ -1,22 +1,3 @@
-/*
-Prompt inicial utilizado:
-A partir de la ListaEnlazada con búsqueda, quiero implementar el método para consultar un elemento por su índice ordinal:
-int obtener(int posicion)
-
-### Razonamiento Conceptual: Recorrido Secuencial vs. Acceso por Índice en Arreglos
-- Aunque el método reciba un parámetro entero 'posicion' similar al índice de un arreglo (0, 1, 2, ...), en una lista enlazada simple NO existe acceso directo O(1).
-- Para obtener el elemento en la posición 'posicion', el algoritmo debe validar rigurosamente los límites y luego posicionar un puntero temporal 'actual = head' para realizar exactamente 'posicion' avances sucesivos (actual = actual.getSiguiente()).
-- El costo computacional es O(k) donde k es la posición solicitada (hasta O(n) para el último elemento).
-
-### Validación de Casos Límite
-- Si posicion < 0 o posicion >= size (incluyendo lista vacía donde size == 0): Debe lanzar IndexOutOfBoundsException indicando el índice inválido y el tamaño actual de la lista.
-- Si posicion == 0: Retorna inmediatamente head.getDato() (O(1)).
-- Si posicion == size - 1: Retorna el último dato tras recorrer toda la lista (O(n)).
-
-Ajustes realizados luego de la primera respuesta de OpenCode:
-Sin ajustes.
-*/
-
 package listas_enlazadas.ejercicio03;
 
 public class ListaEnlazada {
@@ -104,3 +85,21 @@ public class ListaEnlazada {
     }
 }
 
+/*
+Prompt inicial utilizado:
+A partir de la ListaEnlazada con búsqueda, quiero implementar el método para consultar un elemento por su índice ordinal:
+int obtener(int posicion)
+
+### Razonamiento Conceptual: Recorrido Secuencial vs. Acceso por Índice en Arreglos
+- Aunque el método reciba un parámetro entero 'posicion' similar al índice de un arreglo (0, 1, 2, ...), en una lista enlazada simple NO existe acceso directo O(1).
+- Para obtener el elemento en la posición 'posicion', el algoritmo debe validar rigurosamente los límites y luego posicionar un puntero temporal 'actual = head' para realizar exactamente 'posicion' avances sucesivos (actual = actual.getSiguiente()).
+- El costo computacional es O(k) donde k es la posición solicitada (hasta O(n) para el último elemento).
+
+### Validación de Casos Límite
+- Si posicion < 0 o posicion >= size (incluyendo lista vacía donde size == 0): Debe lanzar IndexOutOfBoundsException indicando el índice inválido y el tamaño actual de la lista.
+- Si posicion == 0: Retorna inmediatamente head.getDato() (O(1)).
+- Si posicion == size - 1: Retorna el último dato tras recorrer toda la lista (O(n)).
+
+Ajustes realizados luego de la primera respuesta de OpenCode:
+Sin ajustes.
+*/

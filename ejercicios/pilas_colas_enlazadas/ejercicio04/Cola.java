@@ -1,32 +1,3 @@
-/*
-Prompt inicial utilizado:
-Quiero implementar en Java una Cola Enlazada Genérica (Cola<T>) desde cero, parametrizada por un tipo T, utilizando nodos enlazados simples y sin utilizar ninguna clase de la Java Collections Framework.
-
-### Estructura de Clases y Nodos
-- Clase Nodo<T>: contiene un atributo 'dato' de tipo parametrizado T y una referencia autorreferencial 'siguiente' de tipo Nodo<T>.
-- Clase Cola<T>: administra la cola mediante referencias 'head' (inicio/frente), 'tail' (fin) y el contador 'size'.
-- Clase Cliente: clase del dominio con campos como 'id' (int) y 'nombre' (String) para verificar el funcionamiento con objetos de negocio además de tipos básicos como String.
-
-### Razonamiento Conceptual: Cola FIFO Genérica e Independencia de Tipo
-- Principio FIFO independiente del tipo: El orden de atención o salida (primero en entrar, primero en salir) depende de los punteros 'head' y 'tail', no del contenido del nodo. La estructura almacena referencias genéricas, manteniendo inalterable el comportamiento FIFO para cualquier tipo de objeto.
-- Operaciones en tiempo constante O(1):
-  - enqueue(T): se enlaza el nuevo nodo al final mediante 'tail', garantizando O(1).
-  - dequeue(): se extrae el nodo ubicado en 'head', garantizando O(1).
-  - peek(): se inspecciona el nodo en 'head' sin modificar referencias, en O(1).
-- Manejo de fin de cola: Al desencolar el último elemento, 'tail' debe asignarse a null para reflejar el estado vacío de la estructura. Si se invoca dequeue() o peek() en estado vacío, se debe lanzar NoSuchElementException.
-
-### Operaciones Requeridas
-- void enqueue(T elemento): agrega un elemento al final de la cola (O(1)).
-- T dequeue(): remueve y retorna el elemento al frente (O(1)); lanza NoSuchElementException si está vacía.
-- T peek(): retorna el elemento al frente sin extraerlo (O(1)); lanza NoSuchElementException si está vacía.
-- boolean estaVacia(): indica si la cola no tiene nodos.
-- int getSize(): retorna la cantidad de elementos.
-- void imprimir(): muestra los elementos desde el frente hasta el final.
-
-Ajustes realizados luego de la primera respuesta de OpenCode:
-Sin ajustes.
-*/
-
 package pilas_colas_enlazadas.ejercicio04;
 
 import java.util.NoSuchElementException;
@@ -121,3 +92,31 @@ public class Cola<T> {
     }
 }
 
+/*
+Prompt inicial utilizado:
+Quiero implementar en Java una Cola Enlazada Genérica (Cola<T>) desde cero, parametrizada por un tipo T, utilizando nodos enlazados simples y sin utilizar ninguna clase de la Java Collections Framework.
+
+### Estructura de Clases y Nodos
+- Clase Nodo<T>: contiene un atributo 'dato' de tipo parametrizado T y una referencia autorreferencial 'siguiente' de tipo Nodo<T>.
+- Clase Cola<T>: administra la cola mediante referencias 'head' (inicio/frente), 'tail' (fin) y el contador 'size'.
+- Clase Cliente: clase del dominio con campos como 'id' (int) y 'nombre' (String) para verificar el funcionamiento con objetos de negocio además de tipos básicos como String.
+
+### Razonamiento Conceptual: Cola FIFO Genérica e Independencia de Tipo
+- Principio FIFO independiente del tipo: El orden de atención o salida (primero en entrar, primero en salir) depende de los punteros 'head' y 'tail', no del contenido del nodo. La estructura almacena referencias genéricas, manteniendo inalterable el comportamiento FIFO para cualquier tipo de objeto.
+- Operaciones en tiempo constante O(1):
+  - enqueue(T): se enlaza el nuevo nodo al final mediante 'tail', garantizando O(1).
+  - dequeue(): se extrae el nodo ubicado en 'head', garantizando O(1).
+  - peek(): se inspecciona el nodo en 'head' sin modificar referencias, en O(1).
+- Manejo de fin de cola: Al desencolar el último elemento, 'tail' debe asignarse a null para reflejar el estado vacío de la estructura. Si se invoca dequeue() o peek() en estado vacío, se debe lanzar NoSuchElementException.
+
+### Operaciones Requeridas
+- void enqueue(T elemento): agrega un elemento al final de la cola (O(1)).
+- T dequeue(): remueve y retorna el elemento al frente (O(1)); lanza NoSuchElementException si está vacía.
+- T peek(): retorna el elemento al frente sin extraerlo (O(1)); lanza NoSuchElementException si está vacía.
+- boolean estaVacia(): indica si la cola no tiene nodos.
+- int getSize(): retorna la cantidad de elementos.
+- void imprimir(): muestra los elementos desde el frente hasta el final.
+
+Ajustes realizados luego de la primera respuesta de OpenCode:
+Sin ajustes.
+*/

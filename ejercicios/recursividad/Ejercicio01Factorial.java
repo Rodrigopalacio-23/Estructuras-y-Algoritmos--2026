@@ -1,24 +1,3 @@
-/*
-Quiero implementar en Java una función recursiva que calcule el factorial de un número entero no negativo n (n!).
-
-Este problema puede resolverse recursivamente porque matemáticamente el factorial de un número n se define en términos del factorial del número anterior: n! = n * (n - 1)!. Por lo tanto, el cálculo de un problema mayor depende directamente de resolver el mismo subproblema para un tamaño menor.
-
-El caso base es cuando n es 0 o 1 (n <= 1), porque por definición matemática factorial(0) = 1 y factorial(1) = 1. En estos casos el resultado se conoce de forma inmediata sin necesidad de realizar más llamadas recursivas.
-
-El caso recursivo es n * factorial(n - 1), porque en cada llamada el valor de n se reduce en una unidad (n - 1), disminuyendo el espacio del problema y acercándose estrictamente al caso base n <= 1 para evitar recursión infinita.
-
-La función debe devolver un número entero largo (long) con el resultado del factorial de n.
-
-Quiero que el código tenga comentarios explicando el caso base, el caso recursivo y la pila de llamadas (call stack), detallando cómo se apilan los marcos hasta el caso base y cómo se desapilan multiplicando los retornos.
-
-También quiero probarlo con estos casos:
-- caso 1: n = 0 (caso base inmediato, resultado 1)
-- caso 2: n = 1 (caso base inmediato, resultado 1)
-- caso 3: n = 5 (5! = 120, caso estándar)
-- caso 4: n = 7 (7! = 5040)
-- caso 5: n = 12 (12! = 479001600, valor grande)
-*/
-
 package recursividad;
 
 public class Ejercicio01Factorial {
@@ -74,3 +53,24 @@ public class Ejercicio01Factorial {
     }
 }
 
+/*
+Prompt inicial utilizado:
+Quiero implementar en Java una función recursiva que calcule el factorial de un número entero no negativo n (n!).
+
+Este problema puede resolverse recursivamente porque matemáticamente el factorial de un número n se define en términos del factorial del número anterior: n! = n * (n - 1)!. Por lo tanto, el cálculo de un problema mayor depende directamente de resolver el mismo subproblema para un tamaño menor.
+
+El caso base es cuando n es 0 o 1 (n <= 1), porque por definición matemática factorial(0) = 1 y factorial(1) = 1. En estos casos el resultado se conoce de forma inmediata sin necesidad de realizar más llamadas recursivas.
+
+El caso recursivo es n * factorial(n - 1), porque en cada llamada el valor de n se reduce en una unidad (n - 1), disminuyendo el espacio del problema y acercándose estrictamente al caso base n <= 1 para evitar recursión infinita.
+
+La función debe devolver un número entero largo (long) con el resultado del factorial de n.
+
+Quiero que el código tenga comentarios explicando el caso base, el caso recursivo y la pila de llamadas (call stack), detallando cómo se apilan los marcos hasta el caso base y cómo se desapilan multiplicando los retornos.
+
+También quiero probarlo con estos casos:
+- caso 1: n = 0 (caso base inmediato, resultado 1)
+- caso 2: n = 1 (caso base inmediato, resultado 1)
+- caso 3: n = 5 (5! = 120, caso estándar)
+- caso 4: n = 7 (7! = 5040)
+- caso 5: n = 12 (12! = 479001600, valor grande)
+*/

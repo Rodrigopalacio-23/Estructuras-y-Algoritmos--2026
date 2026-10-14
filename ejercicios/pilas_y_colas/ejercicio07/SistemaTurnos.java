@@ -1,28 +1,3 @@
-/*
-Quiero implementar en Java un simulador de sistema de turnos para atención en una oficina (SistemaTurnos) utilizando una Cola basada en arreglos.
-
-### Estructura y Arreglo Interno
-La clase debe gestionar una entidad de turno Turno(int numero, String nombreCliente) y un arreglo Turno[] fila de capacidad fija, junto con índices 'frente', 'final' y un contador 'personasEsperando'.
-
-### Razonamiento: ¿Por qué este problema utiliza FIFO y NO LIFO?
-El principio de una sala de espera o atención ciudadana se rige por la justicia y el orden de llegada:
-- FIFO (First-In, First-Out): La primera persona que llega a la oficina y solicita un turno es legal y moralmente la primera en ser llamada a ventanilla. Esto garantiza equidad y un tiempo de espera acotado.
-- Si utilizáramos una Pila (LIFO): Cada nueva persona que ingresara a la oficina pasaría inmediatamente al frente para ser atendida antes que todos los demás. Las personas que llegaron temprano quedarían relegadas en la base de la pila, sufriendo un bloqueo indefinido o inanición (starvation). Por esta razón, el modelo LIFO es totalmente inadecuado e injusto para la atención de clientes.
-
-### Operaciones Requeridas
-- void registrarPersona(String nombreCliente): Emite un nuevo número correlativo de turno y encola a la persona.
-- Turno atenderSiguiente(): Desencola y atiende a la persona que encabeza la fila.
-- Turno consultarProximo(): Consulta quién está primero en la fila sin atenderlo.
-- boolean hayPersonasEsperando(), boolean salaLlena(), int cantidadEnEspera().
-
-### Casos Límite y Manejo de Errores
-- Sala de espera llena: Si se intenta registrar un cliente cuando la cola está llena, lanzar IllegalStateException("Error: Sala de espera llena. No se pueden emitir más turnos por el momento.").
-- No hay clientes para atender: Si se intenta atender o consultar cuando la cola está vacía, lanzar IllegalStateException("Error: No hay clientes esperando para ser atendidos.").
-
-### Casos de Prueba en Main
-Crear una sala con capacidad para 4 personas. Registrar a "Carlos", "Beatriz", "Andrés". Consultar quién está primero. Registrar a "Diana" para completar la capacidad. Intentar registrar a "Elena" con sala llena capturando la excepción. Atender a los clientes uno a uno demostrando el orden FIFO de atención. Intentar llamar a ventanilla con la sala vacía.
-*/
-
 package pilas_y_colas.ejercicio07;
 
 public class SistemaTurnos {
@@ -135,7 +110,27 @@ public class SistemaTurnos {
 }
 
 /*
-Ajustes al prompt:
-Sin ajustes.
-*/
+Prompt inicial utilizado:
+Quiero implementar en Java un simulador de sistema de turnos para atención en una oficina (SistemaTurnos) utilizando una Cola basada en arreglos.
 
+### Estructura y Arreglo Interno
+La clase debe gestionar una entidad de turno Turno(int numero, String nombreCliente) y un arreglo Turno[] fila de capacidad fija, junto con índices 'frente', 'final' y un contador 'personasEsperando'.
+
+### Razonamiento: ¿Por qué este problema utiliza FIFO y NO LIFO?
+El principio de una sala de espera o atención ciudadana se rige por la justicia y el orden de llegada:
+- FIFO (First-In, First-Out): La primera persona que llega a la oficina y solicita un turno es legal y moralmente la primera en ser llamada a ventanilla. Esto garantiza equidad y un tiempo de espera acotado.
+- Si utilizáramos una Pila (LIFO): Cada nueva persona que ingresara a la oficina pasaría inmediatamente al frente para ser atendida antes que todos los demás. Las personas que llegaron temprano quedarían relegadas en la base de la pila, sufriendo un bloqueo indefinido o inanición (starvation). Por esta razón, el modelo LIFO es totalmente inadecuado e injusto para la atención de clientes.
+
+### Operaciones Requeridas
+- void registrarPersona(String nombreCliente): Emite un nuevo número correlativo de turno y encola a la persona.
+- Turno atenderSiguiente(): Desencola y atiende a la persona que encabeza la fila.
+- Turno consultarProximo(): Consulta quién está primero en la fila sin atenderlo.
+- boolean hayPersonasEsperando(), boolean salaLlena(), int cantidadEnEspera().
+
+### Casos Límite y Manejo de Errores
+- Sala de espera llena: Si se intenta registrar un cliente cuando la cola está llena, lanzar IllegalStateException("Error: Sala de espera llena. No se pueden emitir más turnos por el momento.").
+- No hay clientes para atender: Si se intenta atender o consultar cuando la cola está vacía, lanzar IllegalStateException("Error: No hay clientes esperando para ser atendidos.").
+
+### Casos de Prueba en Main
+Crear una sala con capacidad para 4 personas. Registrar a "Carlos", "Beatriz", "Andrés". Consultar quién está primero. Registrar a "Diana" para completar la capacidad. Intentar registrar a "Elena" con sala llena capturando la excepción. Atender a los clientes uno a uno demostrando el orden FIFO de atención. Intentar llamar a ventanilla con la sala vacía.
+*/

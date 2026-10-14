@@ -1,28 +1,3 @@
-/*
-Quiero implementar en Java un programa que demuestre experimental y visualmente el problema del desperdicio de espacio de memoria (falso desbordamiento o "False Overflow") en una Cola Simple lineal basada en un arreglo de tamaño fijo.
-
-### Estructura y Arreglo Interno
-La clase DesperdicioColaSimple debe gestionar un arreglo Integer[] datos (usando null para representar celdas vacías), junto con índices 'front' y 'rear'.
-
-### Razonamiento: El Problema del Desperdicio de Posiciones en Cola Simple
-En una cola lineal simple:
-1. Al encolar (enqueue), el puntero 'rear' avanza hacia la derecha (rear++).
-2. Al desencolar (dequeue), el puntero 'front' avanza hacia la derecha (front++), liberando los primeros casilleros del arreglo.
-3. El problema del falso desbordamiento:
-   Cuando 'rear' llega al final físico del arreglo (rear == capacidad - 1), la condición de cola llena se activa. Aunque se hayan desencolado varios elementos y las posiciones iniciales (0, 1, 2...) estén completamente libres y vacías, una cola simple NO puede reutilizarlas porque 'rear' no puede retroceder.
-4. Consecuencia: La cola reporta estar "llena" y rechaza nuevas inserciones a pesar de tener espacio físico disponible en memoria. Esta ineficiencia es la motivación teórica directa que justifica la creación de la Cola Circular.
-
-### Requisitos Específicos del Enunciado
-- El método main debe imprimir el estado visual detallado del arreglo interno después de cada tanda de operaciones enqueue y dequeue.
-- Mostrar explícitamente las posiciones que quedan libres al inicio y cómo quedan inutilizables.
-- Provocar el intento de inserción que falla por falso desbordamiento a pesar de haber celdas vacías.
-
-### Casos de Prueba en Main
-1. Tanda 1 (Llenado inicial): Crear cola de capacidad 5. Encolar [10, 20, 30, 40, 50]. Imprimir arreglo.
-2. Tanda 2 (Vaciado parcial): Desencolar 3 elementos (10, 20, 30). Imprimir arreglo mostrando posiciones [0, 1, 2] libres al inicio con null.
-3. Tanda 3 (Falso desbordamiento): Intentar encolar el elemento 60. Demostrar que el algoritmo reporta "Cola llena" (porque rear == 4), aunque hay 3 casilleros libres al inicio.
-*/
-
 package pilas_y_colas.ejercicio09;
 
 import java.util.Arrays;
@@ -134,7 +109,27 @@ public class DesperdicioColaSimple {
 }
 
 /*
-Ajustes al prompt:
-Sin ajustes.
-*/
+Prompt inicial utilizado:
+Quiero implementar en Java un programa que demuestre experimental y visualmente el problema del desperdicio de espacio de memoria (falso desbordamiento o "False Overflow") en una Cola Simple lineal basada en un arreglo de tamaño fijo.
 
+### Estructura y Arreglo Interno
+La clase DesperdicioColaSimple debe gestionar un arreglo Integer[] datos (usando null para representar celdas vacías), junto con índices 'front' y 'rear'.
+
+### Razonamiento: El Problema del Desperdicio de Posiciones en Cola Simple
+En una cola lineal simple:
+1. Al encolar (enqueue), el puntero 'rear' avanza hacia la derecha (rear++).
+2. Al desencolar (dequeue), el puntero 'front' avanza hacia la derecha (front++), liberando los primeros casilleros del arreglo.
+3. El problema del falso desbordamiento:
+   Cuando 'rear' llega al final físico del arreglo (rear == capacidad - 1), la condición de cola llena se activa. Aunque se hayan desencolado varios elementos y las posiciones iniciales (0, 1, 2...) estén completamente libres y vacías, una cola simple NO puede reutilizarlas porque 'rear' no puede retroceder.
+4. Consecuencia: La cola reporta estar "llena" y rechaza nuevas inserciones a pesar de tener espacio físico disponible en memoria. Esta ineficiencia es la motivación teórica directa que justifica la creación de la Cola Circular.
+
+### Requisitos Específicos del Enunciado
+- El método main debe imprimir el estado visual detallado del arreglo interno después de cada tanda de operaciones enqueue y dequeue.
+- Mostrar explícitamente las posiciones que quedan libres al inicio y cómo quedan inutilizables.
+- Provocar el intento de inserción que falla por falso desbordamiento a pesar de haber celdas vacías.
+
+### Casos de Prueba en Main
+1. Tanda 1 (Llenado inicial): Crear cola de capacidad 5. Encolar [10, 20, 30, 40, 50]. Imprimir arreglo.
+2. Tanda 2 (Vaciado parcial): Desencolar 3 elementos (10, 20, 30). Imprimir arreglo mostrando posiciones [0, 1, 2] libres al inicio con null.
+3. Tanda 3 (Falso desbordamiento): Intentar encolar el elemento 60. Demostrar que el algoritmo reporta "Cola llena" (porque rear == 4), aunque hay 3 casilleros libres al inicio.
+*/

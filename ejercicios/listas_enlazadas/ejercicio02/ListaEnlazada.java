@@ -1,26 +1,3 @@
-/*
-Prompt inicial utilizado:
-A partir de la implementación base de ListaEnlazada simple de enteros, quiero agregar el método de búsqueda:
-boolean buscar(int dato)
-
-### Razonamiento Conceptual: Ausencia de Acceso por Índice y Necesidad de Recorrido Secuencial
-- ¿Por qué no hay acceso directo por índice?:
-  En un arreglo clásico, los elementos están ubicados en celdas contiguas de memoria física. El compilador calcula la dirección de cualquier índice 'i' en tiempo constante O(1) con la fórmula matemática: direccion = base + (i * tamano_elemento).
-  En una lista enlazada simple, los nodos son objetos creados independientemente y dispersos en cualquier lugar de la memoria heap. La única forma de llegar a un nodo es a través del puntero 'siguiente' del nodo previo. No existe cálculo aritmético directo posible.
-- ¿Por qué la búsqueda es estrictamente secuencial?:
-  Para saber si un elemento existe, estamos obligados a comenzar en 'head' y avanzar nodo a nodo (actual = actual.getSiguiente()) comparando si actual.getDato() == dato. Si se encuentra coincidencia, retorna true (corte temprano O(1) en mejor caso). Si se llega a null sin encontrarlo, se concluye que no existe (retorna false en O(n)).
-
-### Casos a Contemplar
-- Lista vacía (head == null): retorna false de inmediato.
-- Elemento ubicado en el primer nodo (head).
-- Elemento ubicado en un nodo intermedio.
-- Elemento ubicado en el último nodo.
-- Elemento inexistente en la lista.
-
-Ajustes realizados luego de la primera respuesta de OpenCode:
-Sin ajustes.
-*/
-
 package listas_enlazadas.ejercicio02;
 
 public class ListaEnlazada {
@@ -92,3 +69,25 @@ public class ListaEnlazada {
     }
 }
 
+/*
+Prompt inicial utilizado:
+A partir de la implementación base de ListaEnlazada simple de enteros, quiero agregar el método de búsqueda:
+boolean buscar(int dato)
+
+### Razonamiento Conceptual: Ausencia de Acceso por Índice y Necesidad de Recorrido Secuencial
+- ¿Por qué no hay acceso directo por índice?:
+  En un arreglo clásico, los elementos están ubicados en celdas contiguas de memoria física. El compilador calcula la dirección de cualquier índice 'i' en tiempo constante O(1) con la fórmula matemática: direccion = base + (i * tamano_elemento).
+  En una lista enlazada simple, los nodos son objetos creados independientemente y dispersos en cualquier lugar de la memoria heap. La única forma de llegar a un nodo es a través del puntero 'siguiente' del nodo previo. No existe cálculo aritmético directo posible.
+- ¿Por qué la búsqueda es estrictamente secuencial?:
+  Para saber si un elemento existe, estamos obligados a comenzar en 'head' y avanzar nodo a nodo (actual = actual.getSiguiente()) comparando si actual.getDato() == dato. Si se encuentra coincidencia, retorna true (corte temprano O(1) en mejor caso). Si se llega a null sin encontrarlo, se concluye que no existe (retorna false en O(n)).
+
+### Casos a Contemplar
+- Lista vacía (head == null): retorna false de inmediato.
+- Elemento ubicado en el primer nodo (head).
+- Elemento ubicado en un nodo intermedio.
+- Elemento ubicado en el último nodo.
+- Elemento inexistente en la lista.
+
+Ajustes realizados luego de la primera respuesta de OpenCode:
+Sin ajustes.
+*/

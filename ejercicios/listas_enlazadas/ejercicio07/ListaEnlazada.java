@@ -1,24 +1,3 @@
-/*
-Prompt inicial utilizado:
-A partir de la ListaEnlazada con eliminación por posición, quiero implementar el método para actualizar el valor de un nodo:
-void modificar(int posicion, int nuevoDato)
-
-### Razonamiento Conceptual: Modificar el Dato vs. Modificar la Referencia
-- Modificar el dato (actual.setDato(nuevoDato)):
-  Consiste simplemente en sobrescribir el valor almacenado dentro del campo 'dato' del objeto Nodo ya existente. No se crea ningún nodo nuevo, no se eliminan nodos y no se altera en absoluto la topología de la lista. Las conexiones hacia el nodo anterior y hacia el nodo siguiente permanecen 100% intactas.
-- Modificar la referencia (actual.setSiguiente(...)):
-  Altera la estructura y conectividad de la lista. Conecta o desconecta nodos, pudiendo insertar, desviar o romper la cadena.
-  Por ende, modificar un dato es una operación inocua para la integridad estructural de la lista, a diferencia de la reasignación de punteros.
-
-### Casos Límite y Validaciones
-- Validación previa: Si posicion < 0 o posicion >= size, lanzar IndexOutOfBoundsException ANTES de recorrer la lista.
-- Modificar la posición 0 (head).
-- Modificar una posición intermedia o la última posición (size - 1).
-
-Ajustes realizados luego de la primera respuesta de OpenCode:
-Sin ajustes.
-*/
-
 package listas_enlazadas.ejercicio07;
 
 public class ListaEnlazada {
@@ -186,3 +165,23 @@ public class ListaEnlazada {
     }
 }
 
+/*
+Prompt inicial utilizado:
+A partir de la ListaEnlazada con eliminación por posición, quiero implementar el método para actualizar el valor de un nodo:
+void modificar(int posicion, int nuevoDato)
+
+### Razonamiento Conceptual: Modificar el Dato vs. Modificar la Referencia
+- Modificar el dato (actual.setDato(nuevoDato)):
+  Consiste simplemente en sobrescribir el valor almacenado dentro del campo 'dato' del objeto Nodo ya existente. No se crea ningún nodo nuevo, no se eliminan nodos y no se altera en absoluto la topología de la lista. Las conexiones hacia el nodo anterior y hacia el nodo siguiente permanecen 100% intactas.
+- Modificar la referencia (actual.setSiguiente(...)):
+  Altera la estructura y conectividad de la lista. Conecta o desconecta nodos, pudiendo insertar, desviar o romper la cadena.
+  Por ende, modificar un dato es una operación inocua para la integridad estructural de la lista, a diferencia de la reasignación de punteros.
+
+### Casos Límite y Validaciones
+- Validación previa: Si posicion < 0 o posicion >= size, lanzar IndexOutOfBoundsException ANTES de recorrer la lista.
+- Modificar la posición 0 (head).
+- Modificar una posición intermedia o la última posición (size - 1).
+
+Ajustes realizados luego de la primera respuesta de OpenCode:
+Sin ajustes.
+*/

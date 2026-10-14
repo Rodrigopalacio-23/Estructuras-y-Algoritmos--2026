@@ -1,28 +1,3 @@
-/*
-Quiero implementar en Java un simulador de historial de navegación web (HistorialNavegacion) utilizando una Pila basada en arreglos.
-
-### Estructura y Arreglo Interno
-La clase debe gestionar un arreglo String[] historial de tamaño fijo y un índice 'tope' que apunte a la URL de la página web actual en la cima de la pila.
-
-### Razonamiento: ¿Por qué el Historial de Navegación funciona bajo el principio LIFO?
-Durante la navegación en un navegador web, el usuario transita secuencialmente por una serie de páginas (por ejemplo: Inicio -> Noticias -> Deportes).
-- Cuando el usuario hace clic en el botón "Atrás" (retroceder), la expectativa fundamental del usuario es regresar a la página que visitó más recientemente (la última en ser visitada antes de la actual).
-- Esto responde estrictamente al principio LIFO (Last-In, First-Out): la última URL apilada en el historial es la primera que se desapila al solicitar volver atrás. Si utilizáramos una cola (FIFO), al presionar "Atrás" volveríamos a la primera página histórica (la más antigua), lo cual quebraría la lógica de navegación web.
-
-### Operaciones Requeridas
-- void visitar(String url): Apila la nueva URL en el historial.
-- String retroceder(): Realiza pop del historial, retornando a la página anterior.
-- String paginaActual(): Consulta la cima del historial sin modificarlo.
-- int cantidadPaginas() y boolean puedeRetroceder().
-
-### Casos Límite y Manejo de Errores
-- Historial lleno: Si se supera la capacidad máxima del arreglo, se lanza IllegalStateException("Error: Historial lleno, no se pueden almacenar más visitas.").
-- No se puede retroceder: Si solo queda 1 página (la inicial) o ninguna, intentar retroceder debe controlarse informando que no hay página anterior o lanzando IllegalStateException("Error: No hay páginas anteriores en el historial.").
-
-### Casos de Prueba en Main
-Crear un historial de capacidad 5. Visitar "google.com", "wikipedia.org", "github.com", "stackoverflow.com". Consultar página actual. Retroceder dos veces (observando el regreso en orden LIFO). Visitar una nueva página "reddit.com". Retroceder hasta llegar a la página inicial e intentar retroceder más allá del límite capturando el error.
-*/
-
 package pilas_y_colas.ejercicio04;
 
 import java.util.Arrays;
@@ -125,7 +100,27 @@ public class HistorialNavegacion {
 }
 
 /*
-Ajustes al prompt:
-Sin ajustes.
-*/
+Prompt inicial utilizado:
+Quiero implementar en Java un simulador de historial de navegación web (HistorialNavegacion) utilizando una Pila basada en arreglos.
 
+### Estructura y Arreglo Interno
+La clase debe gestionar un arreglo String[] historial de tamaño fijo y un índice 'tope' que apunte a la URL de la página web actual en la cima de la pila.
+
+### Razonamiento: ¿Por qué el Historial de Navegación funciona bajo el principio LIFO?
+Durante la navegación en un navegador web, el usuario transita secuencialmente por una serie de páginas (por ejemplo: Inicio -> Noticias -> Deportes).
+- Cuando el usuario hace clic en el botón "Atrás" (retroceder), la expectativa fundamental del usuario es regresar a la página que visitó más recientemente (la última en ser visitada antes de la actual).
+- Esto responde estrictamente al principio LIFO (Last-In, First-Out): la última URL apilada en el historial es la primera que se desapila al solicitar volver atrás. Si utilizáramos una cola (FIFO), al presionar "Atrás" volveríamos a la primera página histórica (la más antigua), lo cual quebraría la lógica de navegación web.
+
+### Operaciones Requeridas
+- void visitar(String url): Apila la nueva URL en el historial.
+- String retroceder(): Realiza pop del historial, retornando a la página anterior.
+- String paginaActual(): Consulta la cima del historial sin modificarlo.
+- int cantidadPaginas() y boolean puedeRetroceder().
+
+### Casos Límite y Manejo de Errores
+- Historial lleno: Si se supera la capacidad máxima del arreglo, se lanza IllegalStateException("Error: Historial lleno, no se pueden almacenar más visitas.").
+- No se puede retroceder: Si solo queda 1 página (la inicial) o ninguna, intentar retroceder debe controlarse informando que no hay página anterior o lanzando IllegalStateException("Error: No hay páginas anteriores en el historial.").
+
+### Casos de Prueba en Main
+Crear un historial de capacidad 5. Visitar "google.com", "wikipedia.org", "github.com", "stackoverflow.com". Consultar página actual. Retroceder dos veces (observando el regreso en orden LIFO). Visitar una nueva página "reddit.com". Retroceder hasta llegar a la página inicial e intentar retroceder más allá del límite capturando el error.
+*/

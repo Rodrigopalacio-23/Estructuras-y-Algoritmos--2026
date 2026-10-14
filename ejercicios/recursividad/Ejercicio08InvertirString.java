@@ -1,28 +1,3 @@
-/*
-Quiero implementar en Java una función recursiva que invierta un String (cadena de texto).
-
-Este problema puede resolverse recursivamente porque invertir una cadena compuesta por un primer carácter 'c' seguido de un resto 'resto' equivale a invertir el 'resto' recursivamente y concatenarle al final el primer carácter 'c' (invertir(resto) + c).
-
-El caso base es cuando la cadena es vacía ("") o tiene longitud 1 (str.length() <= 1), porque una cadena vacía o de un solo carácter ya se encuentra invertida por sí misma. En este caso se devuelve la misma cadena directamente y se detiene la recursión.
-
-Para separar el primer carácter del resto, se utiliza str.charAt(0) para obtener el primer carácter y str.substring(1) para extraer la subcadena restante.
-
-La cadena se reduce en cada llamada al pasar str.substring(1) como argumento a invertirString, disminuyendo la longitud de la cadena en un carácter en cada paso hasta llegar al caso base.
-
-El resultado se reconstruye al volver de la recursión concatenando el resultado de invertirString(str.substring(1)) con el primer carácter al final (+ str.charAt(0)).
-
-La función debe devolver un String con los caracteres en orden inverso.
-
-Quiero que el código tenga comentarios explicando el caso base, el caso recursivo y la pila de llamadas.
-
-También quiero probarlo con estas palabras como prueba:
-- caso 1: "" (cadena vacía, resultado "")
-- caso 2: "a" (un solo carácter, resultado "a")
-- caso 3: "hola" (resultado "aloh")
-- caso 4: "recursividad" (resultado "dadivisrucer")
-- caso 5: "algoritmo" (resultado "omtirogla")
-*/
-
 package recursividad;
 
 public class Ejercicio08InvertirString {
@@ -81,3 +56,28 @@ public class Ejercicio08InvertirString {
     }
 }
 
+/*
+Prompt inicial utilizado:
+Quiero implementar en Java una función recursiva que invierta un String (cadena de texto).
+
+Este problema puede resolverse recursivamente porque invertir una cadena compuesta por un primer carácter 'c' seguido de un resto 'resto' equivale a invertir el 'resto' recursivamente y concatenarle al final el primer carácter 'c' (invertir(resto) + c).
+
+El caso base es cuando la cadena es vacía ("") o tiene longitud 1 (str.length() <= 1), porque una cadena vacía o de un solo carácter ya se encuentra invertida por sí misma. En este caso se devuelve la misma cadena directamente y se detiene la recursión.
+
+Para separar el primer carácter del resto, se utiliza str.charAt(0) para obtener el primer carácter y str.substring(1) para extraer la subcadena restante.
+
+La cadena se reduce en cada llamada al pasar str.substring(1) como argumento a invertirString, disminuyendo la longitud de la cadena en un carácter en cada paso hasta llegar al caso base.
+
+El resultado se reconstruye al volver de la recursión concatenando el resultado de invertirString(str.substring(1)) con el primer carácter al final (+ str.charAt(0)).
+
+La función debe devolver un String con los caracteres en orden inverso.
+
+Quiero que el código tenga comentarios explicando el caso base, el caso recursivo y la pila de llamadas.
+
+También quiero probarlo con estas palabras como prueba:
+- caso 1: "" (cadena vacía, resultado "")
+- caso 2: "a" (un solo carácter, resultado "a")
+- caso 3: "hola" (resultado "aloh")
+- caso 4: "recursividad" (resultado "dadivisrucer")
+- caso 5: "algoritmo" (resultado "omtirogla")
+*/

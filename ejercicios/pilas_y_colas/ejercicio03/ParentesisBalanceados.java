@@ -1,34 +1,3 @@
-/*
-Quiero implementar en Java un verificador de paréntesis balanceados en expresiones matemáticas (ParentesisBalanceados) utilizando una Pila de caracteres implementada internamente con un arreglo.
-
-### Estructura y Arreglo Interno
-Para no utilizar colecciones de Java, implementaremos una pila interna basada en un arreglo de caracteres char[] pila, con tamaño suficiente para la expresión (por ejemplo longitud de la cadena) y un índice 'top'.
-
-### Razonamiento: Uso de la Pila y Operación Pop
-Al recorrer una expresión carácter por carácter de izquierda a derecha:
-1. Paréntesis que abre '(': Representa una estructura anidada pendiente de resolución. Se apila (push) en la cima de la pila.
-2. Paréntesis que cierra ')': Representa el cierre de la estructura abierta más reciente. En este instante:
-   - Se consulta la pila. Si está vacía, significa que hay un cierre huérfano sin apertura previa que lo respalde -> el balanceo falla de inmediato (inválido).
-   - Si no está vacía, se realiza un pop(), emparejando y cancelando la apertura pendiente más cercana (principio LIFO).
-3. Final del análisis: Al concluir el recorrido completo:
-   - Si la pila queda completamente vacía (isEmpty()), cada apertura encontró su correspondiente cierre -> resultado "válido".
-   - Si la pila contiene elementos remanentes (top >= 0), hubo paréntesis que abrieron pero nunca se cerraron -> resultado "inválido".
-
-### Casos Límite a Contemplar
-- Cierre sin apertura al inicio o en el medio, como ")(" o "() )".
-- Apertura sin cierre al final, como "((()".
-- Expresiones sin ningún paréntesis, como "5 + 3 * 2" (debe ser válido).
-- Expresión nula o vacía (válido trivialmente).
-
-### Casos de Prueba en Main
-1. "(5 + 3) * (2 + 1)" -> Válido
-2. "(5 + 3)) * (2 + 1" -> Inválido (cierre prematuro y apertura sobrante)
-3. ")(" -> Inválido
-4. "5 + 3 * 2" -> Válido (sin paréntesis)
-5. "((10 - 2) * (3 + (4 / 2)))" -> Válido (anidamiento múltiple)
-6. "((5 + 2)" -> Inválido (falta cerrar)
-*/
-
 package pilas_y_colas.ejercicio03;
 
 public class ParentesisBalanceados {
@@ -121,7 +90,32 @@ public class ParentesisBalanceados {
 }
 
 /*
-Ajustes al prompt:
-Sin ajustes.
-*/
+Quiero implementar en Java un verificador de paréntesis balanceados en expresiones matemáticas (ParentesisBalanceados) utilizando una Pila de caracteres implementada internamente con un arreglo.
 
+### Estructura y Arreglo Interno
+Para no utilizar colecciones de Java, implementaremos una pila interna basada en un arreglo de caracteres char[] pila, con tamaño suficiente para la expresión (por ejemplo longitud de la cadena) y un índice 'top'.
+
+### Razonamiento: Uso de la Pila y Operación Pop
+Al recorrer una expresión carácter por carácter de izquierda a derecha:
+1. Paréntesis que abre '(': Representa una estructura anidada pendiente de resolución. Se apila (push) en la cima de la pila.
+2. Paréntesis que cierra ')': Representa el cierre de la estructura abierta más reciente. En este instante:
+   - Se consulta la pila. Si está vacía, significa que hay un cierre huérfano sin apertura previa que lo respalde -> el balanceo falla de inmediato (inválido).
+   - Si no está vacía, se realiza un pop(), emparejando y cancelando la apertura pendiente más cercana (principio LIFO).
+3. Final del análisis: Al concluir el recorrido completo:
+   - Si la pila queda completamente vacía (isEmpty()), cada apertura encontró su correspondiente cierre -> resultado "válido".
+   - Si la pila contiene elementos remanentes (top >= 0), hubo paréntesis que abrieron pero nunca se cerraron -> resultado "inválido".
+
+### Casos Límite a Contemplar
+- Cierre sin apertura al inicio o en el medio, como ")(" o "() )".
+- Apertura sin cierre al final, como "((()".
+- Expresiones sin ningún paréntesis, como "5 + 3 * 2" (debe ser válido).
+- Expresión nula o vacía (válido trivialmente).
+
+### Casos de Prueba en Main
+1. "(5 + 3) * (2 + 1)" -> Válido
+2. "(5 + 3)) * (2 + 1" -> Inválido (cierre prematuro y apertura sobrante)
+3. ")(" -> Inválido
+4. "5 + 3 * 2" -> Válido (sin paréntesis)
+5. "((10 - 2) * (3 + (4 / 2)))" -> Válido (anidamiento múltiple)
+6. "((5 + 2)" -> Inválido (falta cerrar)
+*/

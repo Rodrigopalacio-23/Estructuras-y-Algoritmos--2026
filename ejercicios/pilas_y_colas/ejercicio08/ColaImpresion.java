@@ -1,33 +1,3 @@
-/*
-Quiero implementar en Java un simulador de cola de impresión (ColaImpresion) utilizando una estructura de Cola basada en arreglos.
-
-### Estructura y Arreglo Interno
-La clase debe definir una entidad inmutable Documento(String nombre, int paginas) y gestionar un arreglo Documento[] trabajos de tamaño fijo, con variables de control 'frente', 'final' y 'pendientes'.
-
-### Razonamiento: ¿Por qué una Cola representa correctamente el orden de impresión?
-En un entorno informático, la impresora es un periférico de salida compartido por múltiples aplicaciones y usuarios concurrentes:
-- Los documentos llegan a velocidades variables y no pueden imprimirse todos al mismo tiempo debido a las restricciones mecánicas del hardware.
-- Una Cola FIFO (First-In, First-Out) actúa como un búfer o "spooler" de impresión que conserva con exactitud el orden cronológico en que se emitieron las solicitudes. El primer documento enviado es el primero en ser expulsado en papel.
-- Si utilizáramos una Pila (LIFO), un usuario que envía un documento extenso al comienzo vería postergada su impresión cada vez que otro usuario envíe un documento nuevo, generando frustración e inequidad. Por ende, la Cola FIFO es el estándar de la arquitectura de sistemas operativos para buffers de impresión.
-
-### Operaciones Requeridas
-- void enviarAImprimir(String nombre, int paginas): Encola un nuevo trabajo.
-- Documento imprimirSiguiente(): Desencola y simula la impresión del documento.
-- Documento consultarProximo(): Muestra el documento que está en cabecera sin imprimirlo.
-- boolean tieneTrabajosPendientes(), boolean colaLlena(), int totalHojasPendientes().
-
-### Casos Límite y Manejo de Errores
-- Cola de impresión saturada: Si el búfer está lleno y se envía otro trabajo, lanzar IllegalStateException("Error: Búfer de impresión lleno. No se puede encolar el trabajo.").
-- Búfer vacío: Si la impresora intenta imprimir sin trabajos pendientes, lanzar IllegalStateException("Error: No hay documentos en cola para imprimir.").
-
-### Casos de Prueba en Main
-Crear una cola con capacidad para 4 documentos. Encolar:
-1. "Tesis_Final.pdf" (120 págs)
-2. "Resumen_Historia.docx" (15 págs)
-3. "Factura_Compra.pdf" (2 págs)
-Consultar próximo documento. Llenar la cola con "Presentacion.pptx" (45 págs). Intentar encolar en buffer lleno capturando el error. Imprimir todos los documentos mostrando el orden FIFO. Intentar imprimir con cola vacía.
-*/
-
 package pilas_y_colas.ejercicio08;
 
 public class ColaImpresion {
@@ -143,7 +113,32 @@ public class ColaImpresion {
 }
 
 /*
-Ajustes al prompt:
-Sin ajustes.
-*/
+Prompt inicial utilizado:
+Quiero implementar en Java un simulador de cola de impresión (ColaImpresion) utilizando una estructura de Cola basada en arreglos.
 
+### Estructura y Arreglo Interno
+La clase debe definir una entidad inmutable Documento(String nombre, int paginas) y gestionar un arreglo Documento[] trabajos de tamaño fijo, con variables de control 'frente', 'final' y 'pendientes'.
+
+### Razonamiento: ¿Por qué una Cola representa correctamente el orden de impresión?
+En un entorno informático, la impresora es un periférico de salida compartido por múltiples aplicaciones y usuarios concurrentes:
+- Los documentos llegan a velocidades variables y no pueden imprimirse todos al mismo tiempo debido a las restricciones mecánicas del hardware.
+- Una Cola FIFO (First-In, First-Out) actúa como un búfer o "spooler" de impresión que conserva con exactitud el orden cronológico en que se emitieron las solicitudes. El primer documento enviado es el primero en ser expulsado en papel.
+- Si utilizáramos una Pila (LIFO), un usuario que envía un documento extenso al comienzo vería postergada su impresión cada vez que otro usuario envíe un documento nuevo, generando frustración e inequidad. Por ende, la Cola FIFO es el estándar de la arquitectura de sistemas operativos para buffers de impresión.
+
+### Operaciones Requeridas
+- void enviarAImprimir(String nombre, int paginas): Encola un nuevo trabajo.
+- Documento imprimirSiguiente(): Desencola y simula la impresión del documento.
+- Documento consultarProximo(): Muestra el documento que está en cabecera sin imprimirlo.
+- boolean tieneTrabajosPendientes(), boolean colaLlena(), int totalHojasPendientes().
+
+### Casos Límite y Manejo de Errores
+- Cola de impresión saturada: Si el búfer está lleno y se envía otro trabajo, lanzar IllegalStateException("Error: Búfer de impresión lleno. No se puede encolar el trabajo.").
+- Búfer vacío: Si la impresora intenta imprimir sin trabajos pendientes, lanzar IllegalStateException("Error: No hay documentos en cola para imprimir.").
+
+### Casos de Prueba en Main
+Crear una cola con capacidad para 4 documentos. Encolar:
+1. "Tesis_Final.pdf" (120 págs)
+2. "Resumen_Historia.docx" (15 págs)
+3. "Factura_Compra.pdf" (2 págs)
+Consultar próximo documento. Llenar la cola con "Presentacion.pptx" (45 págs). Intentar encolar en buffer lleno capturando el error. Imprimir todos los documentos mostrando el orden FIFO. Intentar imprimir con cola vacía.
+*/

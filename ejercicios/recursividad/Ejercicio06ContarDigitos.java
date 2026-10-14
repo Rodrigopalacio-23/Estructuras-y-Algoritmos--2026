@@ -1,24 +1,3 @@
-/*
-Quiero implementar en Java una función recursiva que cuente los dígitos de un número entero positivo n.
-
-Este problema puede resolverse recursivamente porque cualquier número en base 10 puede pensarse como su último dígito más el resto de los dígitos. Al realizar la división entera n / 10, se descarta el último dígito, reduciendo el tamaño del número en un dígito en cada paso. Por ende, la cantidad de dígitos de n es igual a 1 + contarDigitos(n / 10).
-
-El caso base es cuando el número es menor que 10 (n < 10), porque en el sistema decimal los números del 0 al 9 están compuestos por una única cifra. Por lo tanto, cuando n < 10, la función devuelve 1 inmediatamente y se detiene la recursión.
-
-El caso recursivo es 1 + contarDigitos(n / 10), porque cada llamada remueve el dígito menos significativo mediante división entera y suma 1 al total devuelto por las llamadas anteriores.
-
-Cada llamada debe devolver un número entero (int) que representa la cantidad acumulada de dígitos procesados hasta ese nivel de la recursión (1 en el caso base, o 1 + el resultado del subproblema en el caso recursivo).
-
-Quiero que el código tenga comentarios explicando el caso base, el caso recursivo y la pila de llamadas.
-
-También quiero probarlo con estos casos:
-- caso 1: n = 7 (un solo dígito, caso base directo, resultado 1)
-- caso 2: n = 42 (dos dígitos, resultado 2)
-- caso 3: n = 582 (tres dígitos, resultado 3)
-- caso 4: n = 1000 (cuatro dígitos, resultado 4)
-- caso 5: n = 987654 (seis dígitos, resultado 6)
-*/
-
 package recursividad;
 
 public class Ejercicio06ContarDigitos {
@@ -73,3 +52,24 @@ public class Ejercicio06ContarDigitos {
     }
 }
 
+/*
+Prompt inicial utilizado:
+Quiero implementar en Java una función recursiva que cuente los dígitos de un número entero positivo n.
+
+Este problema puede resolverse recursivamente porque cualquier número en base 10 puede pensarse como su último dígito más el resto de los dígitos. Al realizar la división entera n / 10, se descarta el último dígito, reduciendo el tamaño del número en un dígito en cada paso. Por ende, la cantidad de dígitos de n es igual a 1 + contarDigitos(n / 10).
+
+El caso base es cuando el número es menor que 10 (n < 10), porque en el sistema decimal los números del 0 al 9 están compuestos por una única cifra. Por lo tanto, cuando n < 10, la función devuelve 1 inmediatamente y se detiene la recursión.
+
+El caso recursivo es 1 + contarDigitos(n / 10), porque cada llamada remueve el dígito menos significativo mediante división entera y suma 1 al total devuelto por las llamadas anteriores.
+
+Cada llamada debe devolver un número entero (int) que representa la cantidad acumulada de dígitos procesados hasta ese nivel de la recursión (1 en el caso base, o 1 + el resultado del subproblema en el caso recursivo).
+
+Quiero que el código tenga comentarios explicando el caso base, el caso recursivo y la pila de llamadas.
+
+También quiero probarlo con estos casos:
+- caso 1: n = 7 (un solo dígito, caso base directo, resultado 1)
+- caso 2: n = 42 (dos dígitos, resultado 2)
+- caso 3: n = 582 (tres dígitos, resultado 3)
+- caso 4: n = 1000 (cuatro dígitos, resultado 4)
+- caso 5: n = 987654 (seis dígitos, resultado 6)
+*/

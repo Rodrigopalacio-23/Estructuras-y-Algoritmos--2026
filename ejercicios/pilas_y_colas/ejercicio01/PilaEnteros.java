@@ -1,31 +1,3 @@
-/*
-Quiero implementar en Java una estructura de datos de Pila de enteros (PilaEnteros) utilizando exclusivamente un arreglo estático de tamaño fijo.
-
-### Estructura y Arreglo Interno
-La clase debe encapsular un arreglo primitivo int[] datos y una variable entera 'top' que actúa como puntero al elemento en la cima de la pila, además de almacenar la capacidad máxima.
-
-### Razonamiento del Índice 'top'
-- Valor inicial: top debe inicializarse en -1. Esto indica explícitamente que la pila está vacía, ya que los índices válidos de un arreglo en Java comienzan en 0.
-- Inserción (push): Primero se incrementa top en 1 (++top) y luego se almacena el elemento en datos[top].
-- Extracción (pop): Se guarda el elemento en datos[top], se decrementa top en 1 (top--) y se retorna el elemento guardado.
-- Cima (peek): Retorna datos[top] sin modificar top.
-
-### Operaciones Requeridas
-- void push(int elemento): Agrega un elemento a la cima.
-- int pop(): Retira y devuelve el elemento de la cima.
-- int peek(): Devuelve el elemento de la cima sin retirarlo.
-- boolean isEmpty(): Retorna true si top == -1.
-- boolean isFull(): Retorna true si top == capacidad - 1.
-- int size(): Retorna top + 1.
-
-### Casos Límite y Manejo de Errores
-- Pila llena (Stack Overflow): Si se intenta hacer push() cuando isFull() es true, debe lanzar IllegalStateException("Error: La pila está llena (desbordamiento).").
-- Pila vacía (Stack Underflow): Si se intenta hacer pop() o peek() cuando isEmpty() es true, debe lanzar IllegalStateException("Error: La pila está vacía (subdesbordamiento).").
-
-### Casos de Prueba en Main
-Crear una pila de capacidad 3, verificar isEmpty(), agregar 3 elementos hasta llenarla, verificar isFull(), consultar peek(), desapilar mostrando elementos, intentar push en pila llena capturando la excepción, e intentar pop en pila vacía capturando la excepción.
-*/
-
 package pilas_y_colas.ejercicio01;
 
 import java.util.Arrays;
@@ -136,7 +108,30 @@ public class PilaEnteros {
 }
 
 /*
-Ajustes al prompt:
-Sin ajustes.
-*/
+Prompt inicial utilizado:
+Quiero implementar en Java una estructura de datos de Pila de enteros (PilaEnteros) utilizando exclusivamente un arreglo estático de tamaño fijo.
 
+### Estructura y Arreglo Interno
+La clase debe encapsular un arreglo primitivo int[] datos y una variable entera 'top' que actúa como puntero al elemento en la cima de la pila, además de almacenar la capacidad máxima.
+
+### Razonamiento del Índice 'top'
+- Valor inicial: top debe inicializarse en -1. Esto indica explícitamente que la pila está vacía, ya que los índices válidos de un arreglo en Java comienzan en 0.
+- Inserción (push): Primero se incrementa top en 1 (++top) y luego se almacena el elemento en datos[top].
+- Extracción (pop): Se guarda el elemento en datos[top], se decrementa top en 1 (top--) y se retorna el elemento guardado.
+- Cima (peek): Retorna datos[top] sin modificar top.
+
+### Operaciones Requeridas
+- void push(int elemento): Agrega un elemento a la cima.
+- int pop(): Retira y devuelve el elemento de la cima.
+- int peek(): Devuelve el elemento de la cima sin retirarlo.
+- boolean isEmpty(): Retorna true si top == -1.
+- boolean isFull(): Retorna true si top == capacidad - 1.
+- int size(): Retorna top + 1.
+
+### Casos Límite y Manejo de Errores
+- Pila llena (Stack Overflow): Si se intenta hacer push() cuando isFull() es true, debe lanzar IllegalStateException("Error: La pila está llena (desbordamiento).").
+- Pila vacía (Stack Underflow): Si se intenta hacer pop() o peek() cuando isEmpty() es true, debe lanzar IllegalStateException("Error: La pila está vacía (subdesbordamiento).").
+
+### Casos de Prueba en Main
+Crear una pila de capacidad 3, verificar isEmpty(), agregar 3 elementos hasta llenarla, verificar isFull(), consultar peek(), desapilar mostrando elementos, intentar push en pila llena capturando la excepción, e intentar pop en pila vacía capturando la excepción.
+*/

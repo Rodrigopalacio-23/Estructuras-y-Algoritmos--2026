@@ -1,30 +1,3 @@
-/*
-Quiero implementar en Java una función recursiva que busque un número dentro de un arreglo de enteros SIN usar ciclos (ni for ni while).
-
-Este problema puede resolverse recursivamente porque buscar un elemento en un arreglo consiste en verificar si el elemento en la posición actual coincide con el buscado, y de no ser así, repetir exactamente la misma búsqueda en el resto del arreglo avanzando al siguiente índice.
-
-La búsqueda empieza desde la posición inicial (índice 0). Para ello, se puede utilizar una función principal sobrecargada que reciba el arreglo y el valor a buscar, y delegue en una función auxiliar recursiva que además reciba el índice actual de búsqueda inicializado en 0.
-
-Para avanzar en el arreglo sin usar ciclos (ni for ni mientras/while), el avance se logra mediante la llamada recursiva pasando el siguiente índice: buscarRecursivo(arreglo, objetivo, indice + 1).
-
-Existen dos casos base:
-1. Caso base cuando llega al final del arreglo sin encontrar el elemento (indice >= arreglo.length): el elemento no existe en el arreglo, por lo que la función devuelve -1 (o false) y se detiene la recursión.
-2. Caso base cuando encuentra el valor (arreglo[indice] == objetivo): se ha hallado el elemento, por lo que la función devuelve inmediatamente el índice actual donde fue encontrado (o true) y se corta la recursión sin avanzar más.
-
-El caso recursivo es buscarRecursivo(arreglo, objetivo, indice + 1), que se ejecuta cuando el índice actual es válido pero arreglo[indice] != objetivo.
-
-La función debe devolver un número entero (int) con el índice de la posición donde se encuentra el elemento en el arreglo, o -1 si el elemento no está presente en ninguna posición.
-
-Quiero que el código tenga comentarios explicando ambos casos base, el caso recursivo y la pila de llamadas, y que no use for ni while en ninguna parte del código (ni siquiera en el método de búsqueda ni en métodos auxiliares).
-
-También quiero probarlo con estos casos:
-- caso 1: elemento en la primera posición (índice 0)
-- caso 2: elemento en posición intermedia
-- caso 3: elemento en la última posición
-- caso 4: elemento inexistente en el arreglo (retorna -1)
-- caso 5: arreglo vacío (retorna -1)
-*/
-
 package recursividad;
 
 import java.util.Arrays;
@@ -118,3 +91,30 @@ public class Ejercicio10BuscarEnArreglo {
     }
 }
 
+/*
+Prompt inicial utilizado:
+Quiero implementar en Java una función recursiva que busque un número dentro de un arreglo de enteros SIN usar ciclos (ni for ni while).
+
+Este problema puede resolverse recursivamente porque buscar un elemento en un arreglo consiste en verificar si el elemento en la posición actual coincide con el buscado, y de no ser así, repetir exactamente la misma búsqueda en el resto del arreglo avanzando al siguiente índice.
+
+La búsqueda empieza desde la posición inicial (índice 0). Para ello, se puede utilizar una función principal sobrecargada que reciba el arreglo y el valor a buscar, y delegue en una función auxiliar recursiva que además reciba el índice actual de búsqueda inicializado en 0.
+
+Para avanzar en el arreglo sin usar ciclos (ni for ni mientras/while), el avance se logra mediante la llamada recursiva pasando el siguiente índice: buscarRecursivo(arreglo, objetivo, indice + 1).
+
+Existen dos casos base:
+1. Caso base cuando llega al final del arreglo sin encontrar el elemento (indice >= arreglo.length): el elemento no existe en el arreglo, por lo que la función devuelve -1 (o false) y se detiene la recursión.
+2. Caso base cuando encuentra el valor (arreglo[indice] == objetivo): se ha hallado el elemento, por lo que la función devuelve inmediatamente el índice actual donde fue encontrado (o true) y se corta la recursión sin avanzar más.
+
+El caso recursivo es buscarRecursivo(arreglo, objetivo, indice + 1), que se ejecuta cuando el índice actual es válido pero arreglo[indice] != objetivo.
+
+La función debe devolver un número entero (int) con el índice de la posición donde se encuentra el elemento en el arreglo, o -1 si el elemento no está presente en ninguna posición.
+
+Quiero que el código tenga comentarios explicando ambos casos base, el caso recursivo y la pila de llamadas, y que no use for ni while en ninguna parte del código (ni siquiera en el método de búsqueda ni en métodos auxiliares).
+
+También quiero probarlo con estos casos:
+- caso 1: elemento en la primera posición (índice 0)
+- caso 2: elemento en posición intermedia
+- caso 3: elemento en la última posición
+- caso 4: elemento inexistente en el arreglo (retorna -1)
+- caso 5: arreglo vacío (retorna -1)
+*/

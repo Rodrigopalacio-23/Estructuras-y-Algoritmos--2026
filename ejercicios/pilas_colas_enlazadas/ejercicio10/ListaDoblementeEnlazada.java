@@ -1,50 +1,3 @@
-/*
-Prompt inicial utilizado:
-Quiero implementar en Java una Lista Doblemente Enlazada Genérica (ListaDoblementeEnlazada<T>) desde cero, utilizando nodos doblemente enlazados y sin utilizar ninguna clase de la Java Collections Framework (como LinkedList, ArrayList, etc.).
-
-### Estructura de Clases y Nodos
-- Clase NodoDoble<T>: contiene el dato (T) y dos referencias: 'anterior' y 'siguiente', ambas de tipo NodoDoble<T>.
-- Clase ListaDoblementeEnlazada<T>: mantiene dos referencias clave: 'head' (primer nodo de la lista) y 'tail' (último nodo de la lista), además de un contador entero 'size'.
-
-### Razonamiento Conceptual: Lista Doblemente Enlazada y Manejo de Enlaces Bidireccionales
-- Ventajas y particularidad de la lista doblemente enlazada:
-  A diferencia de la lista simplemente enlazada donde cada nodo solo conoce a su sucesor, en una lista doblemente enlazada cada nodo mantiene punteros hacia adelante (`siguiente`) y hacia atrás (`anterior`). Esto permite navegación bidireccional eficiente (recorrer desde head hacia tail, y desde tail hacia head) y simplifica las operaciones de inserción y eliminación en cualquier extremo en tiempo O(1).
-- Inserciones en O(1):
-  - insertarAlInicio(T dato):
-    - Si está vacía: head = tail = nuevo.
-    - Si no está vacía: nuevo.siguiente = head; head.anterior = nuevo; head = nuevo.
-  - insertarAlFinal(T dato):
-    - Si está vacía: head = tail = nuevo.
-    - Si no está vacía: tail.siguiente = nuevo; nuevo.anterior = tail; tail = nuevo.
-- Eliminación por valor (eliminar(T dato)):
-  Requiere buscar el nodo comparando con `.equals(dato)` (considerando posibles nulos si correspondiese). Una vez ubicado el nodo a eliminar (`actual`), se deben considerar exhaustivamente todos los casos límite de punteros:
-  1. Caso lista con un único nodo (`actual == head && actual == tail`):
-     head = null; tail = null.
-  2. Caso eliminar el primer nodo (`actual == head`):
-     head = head.siguiente; head.anterior = null.
-  3. Caso eliminar el último nodo (`actual == tail`):
-     tail = tail.anterior; tail.siguiente = null.
-  4. Caso eliminar un nodo intermedio:
-     actual.anterior.siguiente = actual.siguiente;
-     actual.siguiente.anterior = actual.anterior;
-  En todos los casos exitosos, se decrementa `size--` y se retorna `true`. Si el dato no se encuentra, se retorna `false`.
-- Recorridos:
-  - imprimirAdelante(): recorre desde 'head' usando 'siguiente'.
-  - imprimirAtras(): recorre desde 'tail' usando 'anterior'. Demuestra fehacientemente la correcta vinculación bidireccional.
-
-### Operaciones Requeridas
-- void insertarAlInicio(T dato): inserta un elemento al inicio (O(1)).
-- void insertarAlFinal(T dato): inserta un elemento al final (O(1)).
-- boolean eliminar(T dato): busca y elimina la primera aparición del dato considerando todos los casos; retorna true si lo eliminó, false si no existe.
-- void imprimirAdelante(): muestra la lista desde el inicio al final.
-- void imprimirAtras(): muestra la lista desde el final al inicio.
-- boolean estaVacia(): indica si no hay nodos.
-- int getSize(): retorna la cantidad de nodos.
-
-Ajustes realizados luego de la primera respuesta de OpenCode:
-Sin ajustes.
-*/
-
 package pilas_colas_enlazadas.ejercicio10;
 
 public class ListaDoblementeEnlazada<T> {
@@ -190,3 +143,49 @@ public class ListaDoblementeEnlazada<T> {
     }
 }
 
+/*
+Prompt inicial utilizado:
+Quiero implementar en Java una Lista Doblemente Enlazada Genérica (ListaDoblementeEnlazada<T>) desde cero, utilizando nodos doblemente enlazados y sin utilizar ninguna clase de la Java Collections Framework (como LinkedList, ArrayList, etc.).
+
+### Estructura de Clases y Nodos
+- Clase NodoDoble<T>: contiene el dato (T) y dos referencias: 'anterior' y 'siguiente', ambas de tipo NodoDoble<T>.
+- Clase ListaDoblementeEnlazada<T>: mantiene dos referencias clave: 'head' (primer nodo de la lista) y 'tail' (último nodo de la lista), además de un contador entero 'size'.
+
+### Razonamiento Conceptual: Lista Doblemente Enlazada y Manejo de Enlaces Bidireccionales
+- Ventajas y particularidad de la lista doblemente enlazada:
+  A diferencia de la lista simplemente enlazada donde cada nodo solo conoce a su sucesor, en una lista doblemente enlazada cada nodo mantiene punteros hacia adelante (`siguiente`) y hacia atrás (`anterior`). Esto permite navegación bidireccional eficiente (recorrer desde head hacia tail, y desde tail hacia head) y simplifica las operaciones de inserción y eliminación en cualquier extremo en tiempo O(1).
+- Inserciones en O(1):
+  - insertarAlInicio(T dato):
+    - Si está vacía: head = tail = nuevo.
+    - Si no está vacía: nuevo.siguiente = head; head.anterior = nuevo; head = nuevo.
+  - insertarAlFinal(T dato):
+    - Si está vacía: head = tail = nuevo.
+    - Si no está vacía: tail.siguiente = nuevo; nuevo.anterior = tail; tail = nuevo.
+- Eliminación por valor (eliminar(T dato)):
+  Requiere buscar el nodo comparando con `.equals(dato)` (considerando posibles nulos si correspondiese). Una vez ubicado el nodo a eliminar (`actual`), se deben considerar exhaustivamente todos los casos límite de punteros:
+  1. Caso lista con un único nodo (`actual == head && actual == tail`):
+     head = null; tail = null.
+  2. Caso eliminar el primer nodo (`actual == head`):
+     head = head.siguiente; head.anterior = null.
+  3. Caso eliminar el último nodo (`actual == tail`):
+     tail = tail.anterior; tail.siguiente = null.
+  4. Caso eliminar un nodo intermedio:
+     actual.anterior.siguiente = actual.siguiente;
+     actual.siguiente.anterior = actual.anterior;
+  En todos los casos exitosos, se decrementa `size--` y se retorna `true`. Si el dato no se encuentra, se retorna `false`.
+- Recorridos:
+  - imprimirAdelante(): recorre desde 'head' usando 'siguiente'.
+  - imprimirAtras(): recorre desde 'tail' usando 'anterior'. Demuestra fehacientemente la correcta vinculación bidireccional.
+
+### Operaciones Requeridas
+- void insertarAlInicio(T dato): inserta un elemento al inicio (O(1)).
+- void insertarAlFinal(T dato): inserta un elemento al final (O(1)).
+- boolean eliminar(T dato): busca y elimina la primera aparición del dato considerando todos los casos; retorna true si lo eliminó, false si no existe.
+- void imprimirAdelante(): muestra la lista desde el inicio al final.
+- void imprimirAtras(): muestra la lista desde el final al inicio.
+- boolean estaVacia(): indica si no hay nodos.
+- int getSize(): retorna la cantidad de nodos.
+
+Ajustes realizados luego de la primera respuesta de OpenCode:
+Sin ajustes.
+*/

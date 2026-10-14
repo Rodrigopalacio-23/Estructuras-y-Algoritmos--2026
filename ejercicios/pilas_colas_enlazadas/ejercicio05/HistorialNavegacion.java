@@ -1,32 +1,3 @@
-/*
-Prompt inicial utilizado:
-Quiero implementar en Java un Historial de Navegación web (HistorialNavegacion) utilizando una Pila Enlazada propia de URLs (cadenas de texto), sin utilizar ninguna clase de la Java Collections Framework.
-
-### Estructura de Clases y Nodos
-- Clase Nodo: almacena 'url' (String) y la referencia 'siguiente' (Nodo).
-- Clase HistorialNavegacion: estructura que implementa el comportamiento de navegación con una pila enlazada (puntero 'head' al tope del historial) y un contador 'size'.
-
-### Razonamiento Conceptual: Navegación Web y Modelo LIFO
-- Por qué una Pila (LIFO) modela la navegación web:
-  En un navegador, la última página visitada es la página en la que nos encontramos actualmente. Cuando el usuario presiona el botón "Atrás" o retroceder, el sistema descarta la página actual y regresa a la inmediatamente anterior. El orden temporal de acceso e inversión ("la última visitada es la primera en salir al retroceder") coincide estrictamente con la semántica LIFO (Last-In, First-Out) de una pila.
-- Comportamiento y complejidades O(1):
-  - visitar(url): equivale a un 'push' en la cima; la nueva URL pasa a ser la página actual en tiempo O(1).
-  - retroceder(): equivale a un 'pop'; remueve la página actual y regresa a la anterior en tiempo O(1). Si el historial solo tiene 1 página o está vacío, no se puede retroceder más (o se informa/lanza excepción).
-  - paginaActual(): equivale a un 'peek'; consulta la página en la cima sin modificar el historial en tiempo O(1).
-  - imprimirHistorial(): muestra la secuencia de páginas desde la actual hacia las más antiguas en O(n).
-
-### Operaciones Requeridas
-- void visitar(String url): navega a una nueva página agregándola al tope del historial.
-- String retroceder(): desapila la página actual y retorna la página a la que se retrocedió (o la que se abandonó). Lanza IllegalStateException si no hay páginas para retroceder.
-- String paginaActual(): retorna la URL de la página actualmente abierta en el navegador. Lanza IllegalStateException si el historial está vacío.
-- int getCantidadPaginas(): retorna cuántas páginas hay en el historial.
-- boolean estaVacio(): indica si el historial no contiene páginas.
-- void imprimirHistorial(): imprime el historial completo desde la página actual hasta la inicial.
-
-Ajustes realizados luego de la primera respuesta de OpenCode:
-Sin ajustes.
-*/
-
 package pilas_colas_enlazadas.ejercicio05;
 
 import java.util.NoSuchElementException;
@@ -113,3 +84,31 @@ public class HistorialNavegacion {
     }
 }
 
+/*
+Prompt inicial utilizado:
+Quiero implementar en Java un Historial de Navegación web (HistorialNavegacion) utilizando una Pila Enlazada propia de URLs (cadenas de texto), sin utilizar ninguna clase de la Java Collections Framework.
+
+### Estructura de Clases y Nodos
+- Clase Nodo: almacena 'url' (String) y la referencia 'siguiente' (Nodo).
+- Clase HistorialNavegacion: estructura que implementa el comportamiento de navegación con una pila enlazada (puntero 'head' al tope del historial) y un contador 'size'.
+
+### Razonamiento Conceptual: Navegación Web y Modelo LIFO
+- Por qué una Pila (LIFO) modela la navegación web:
+  En un navegador, la última página visitada es la página en la que nos encontramos actualmente. Cuando el usuario presiona el botón "Atrás" o retroceder, el sistema descarta la página actual y regresa a la inmediatamente anterior. El orden temporal de acceso e inversión ("la última visitada es la primera en salir al retroceder") coincide estrictamente con la semántica LIFO (Last-In, First-Out) de una pila.
+- Comportamiento y complejidades O(1):
+  - visitar(url): equivale a un 'push' en la cima; la nueva URL pasa a ser la página actual en tiempo O(1).
+  - retroceder(): equivale a un 'pop'; remueve la página actual y regresa a la anterior en tiempo O(1). Si el historial solo tiene 1 página o está vacío, no se puede retroceder más (o se informa/lanza excepción).
+  - paginaActual(): equivale a un 'peek'; consulta la página en la cima sin modificar el historial en tiempo O(1).
+  - imprimirHistorial(): muestra la secuencia de páginas desde la actual hacia las más antiguas en O(n).
+
+### Operaciones Requeridas
+- void visitar(String url): navega a una nueva página agregándola al tope del historial.
+- String retroceder(): desapila la página actual y retorna la página a la que se retrocedió (o la que se abandonó). Lanza IllegalStateException si no hay páginas para retroceder.
+- String paginaActual(): retorna la URL de la página actualmente abierta en el navegador. Lanza IllegalStateException si el historial está vacío.
+- int getCantidadPaginas(): retorna cuántas páginas hay en el historial.
+- boolean estaVacio(): indica si el historial no contiene páginas.
+- void imprimirHistorial(): imprime el historial completo desde la página actual hasta la inicial.
+
+Ajustes realizados luego de la primera respuesta de OpenCode:
+Sin ajustes.
+*/

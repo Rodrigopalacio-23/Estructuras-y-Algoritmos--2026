@@ -1,24 +1,3 @@
-/*
-Prompt inicial utilizado:
-A partir de la ListaEnlazada con eliminación por valor, quiero implementar la eliminación de un nodo por su índice posicional:
-void eliminarEnPosicion(int posicion)
-
-### Razonamiento Conceptual: Cómo Encontrar el Nodo Anterior y Redirigir Enlaces
-- Para eliminar un nodo en la posición 'posicion', no podemos pararnos directamente sobre él, porque en una lista enlazada simple los enlaces son unidireccionales (hacia adelante). Necesitamos modificar el puntero del nodo inmediatamente previo (índice posicion - 1).
-- Búsqueda del nodo anterior: Se itera con un bucle desde i = 0 hasta posicion - 2 (dando posicion - 1 saltos desde head). El puntero 'anterior' queda ubicado exactamente en el nodo que precede al que será eliminado.
-- Redirección del enlace: El nodo a eliminar es 'actual = anterior.getSiguiente()'. Para extirparlo de la lista, hacemos que 'anterior' se enlace directamente con el sucesor de 'actual':
-  anterior.setSiguiente(actual.getSiguiente());
-- El nodo eliminado queda sin referencias vivas y el Garbage Collector lo reclama.
-
-### Casos Límite y Manejo de Errores
-- Validación de rango: Si posicion < 0 o posicion >= size (incluyendo lista vacía), se lanza IndexOutOfBoundsException("Posición fuera de rango").
-- Eliminar la posición 0 (inicio): Caso especial donde no hay nodo anterior. Se actualiza head = head.getSiguiente(), size--.
-- Eliminar una posición intermedia o final (0 < posicion < size): Se busca el nodo anterior, se redirige el puntero y se decrementa size (size--).
-
-Ajustes realizados luego de la primera respuesta de OpenCode:
-Sin ajustes.
-*/
-
 package listas_enlazadas.ejercicio06;
 
 public class ListaEnlazada {
@@ -178,3 +157,23 @@ public class ListaEnlazada {
     }
 }
 
+/*
+Prompt inicial utilizado:
+A partir de la ListaEnlazada con eliminación por valor, quiero implementar la eliminación de un nodo por su índice posicional:
+void eliminarEnPosicion(int posicion)
+
+### Razonamiento Conceptual: Cómo Encontrar el Nodo Anterior y Redirigir Enlaces
+- Para eliminar un nodo en la posición 'posicion', no podemos pararnos directamente sobre él, porque en una lista enlazada simple los enlaces son unidireccionales (hacia adelante). Necesitamos modificar el puntero del nodo inmediatamente previo (índice posicion - 1).
+- Búsqueda del nodo anterior: Se itera con un bucle desde i = 0 hasta posicion - 2 (dando posicion - 1 saltos desde head). El puntero 'anterior' queda ubicado exactamente en el nodo que precede al que será eliminado.
+- Redirección del enlace: El nodo a eliminar es 'actual = anterior.getSiguiente()'. Para extirparlo de la lista, hacemos que 'anterior' se enlace directamente con el sucesor de 'actual':
+  anterior.setSiguiente(actual.getSiguiente());
+- El nodo eliminado queda sin referencias vivas y el Garbage Collector lo reclama.
+
+### Casos Límite y Manejo de Errores
+- Validación de rango: Si posicion < 0 o posicion >= size (incluyendo lista vacía), se lanza IndexOutOfBoundsException("Posición fuera de rango").
+- Eliminar la posición 0 (inicio): Caso especial donde no hay nodo anterior. Se actualiza head = head.getSiguiente(), size--.
+- Eliminar una posición intermedia o final (0 < posicion < size): Se busca el nodo anterior, se redirige el puntero y se decrementa size (size--).
+
+Ajustes realizados luego de la primera respuesta de OpenCode:
+Sin ajustes.
+*/

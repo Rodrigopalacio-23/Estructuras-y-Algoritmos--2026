@@ -1,24 +1,3 @@
-/*
-Quiero implementar en Java una función recursiva que calcule la potencia de una base entera elevada a un exponente entero no negativo (base^exponente) SIN usar el método Math.pow.
-
-Este problema puede resolverse recursivamente porque la potenciación base^exp equivale matemáticamente a multiplicar la base por sí misma tantas veces como indique el exponente (base * base * ... * base, exp veces). Por ende, potencia(base, exp) puede expresarse como base * potencia(base, exp - 1).
-
-El caso base es exponente 0 (exp == 0), porque por convención matemática y leyes de exponentes cualquier número no nulo elevado a la potencia cero es igual a 1 (base^0 = 1). Cuando exp == 0, la función devuelve 1 inmediatamente, sirviendo como neutro del producto acumulado.
-
-El caso recursivo es base * potencia(base, exp - 1), porque en cada llamada el exponente se reduce en una unidad (exp - 1), disminuyendo la cantidad de multiplicaciones restantes hasta alcanzar el caso base exp == 0.
-
-La función debe devolver un número entero largo (long) con el resultado del cálculo de base^exp en cada caso (1 en el caso base exp == 0, o el producto acumulado en los casos recursivos).
-
-Quiero que el código tenga comentarios explicando el caso base, el caso recursivo y la pila de llamadas, y que no utilice en ningún momento Math.pow.
-
-También quiero probarlo con estos casos:
-- caso 1: base = 5, exp = 0 (caso base con exp = 0, resultado 1)
-- caso 2: base = 7, exp = 1 (resultado 7)
-- caso 3: base = 2, exp = 5 (2^5 = 32)
-- caso 4: base = 3, exp = 4 (3^4 = 81)
-- caso 5: base = 10, exp = 3 (10^3 = 1000)
-*/
-
 package recursividad;
 
 public class Ejercicio04Potencia {
@@ -83,3 +62,24 @@ public class Ejercicio04Potencia {
     }
 }
 
+/*
+Prompt inicial utilizado:
+Quiero implementar en Java una función recursiva que calcule la potencia de una base entera elevada a un exponente entero no negativo (base^exponente) SIN usar el método Math.pow.
+
+Este problema puede resolverse recursivamente porque la potenciación base^exp equivale matemáticamente a multiplicar la base por sí misma tantas veces como indique el exponente (base * base * ... * base, exp veces). Por ende, potencia(base, exp) puede expresarse como base * potencia(base, exp - 1).
+
+El caso base es exponente 0 (exp == 0), porque por convención matemática y leyes de exponentes cualquier número no nulo elevado a la potencia cero es igual a 1 (base^0 = 1). Cuando exp == 0, la función devuelve 1 inmediatamente, sirviendo como neutro del producto acumulado.
+
+El caso recursivo es base * potencia(base, exp - 1), porque en cada llamada el exponente se reduce en una unidad (exp - 1), disminuyendo la cantidad de multiplicaciones restantes hasta alcanzar el caso base exp == 0.
+
+La función debe devolver un número entero largo (long) con el resultado del cálculo de base^exp en cada caso (1 en el caso base exp == 0, o el producto acumulado en los casos recursivos).
+
+Quiero que el código tenga comentarios explicando el caso base, el caso recursivo y la pila de llamadas, y que no utilice en ningún momento Math.pow.
+
+También quiero probarlo con estos casos:
+- caso 1: base = 5, exp = 0 (caso base con exp = 0, resultado 1)
+- caso 2: base = 7, exp = 1 (resultado 7)
+- caso 3: base = 2, exp = 5 (2^5 = 32)
+- caso 4: base = 3, exp = 4 (3^4 = 81)
+- caso 5: base = 10, exp = 3 (10^3 = 1000)
+*/

@@ -1,24 +1,3 @@
-/*
-Prompt inicial utilizado:
-A partir de la ListaEnlazada con inserción en posición, quiero implementar el método para eliminar un nodo por su valor:
-boolean eliminar(int dato)
-
-### Razonamiento Conceptual: Cómo se elimina en Java y el Garbage Collector
-- En lenguajes como C/C++, la memoria dinámica se libera manualmente mediante llamadas a free() o delete.
-- En Java NO se destruye manualmente el objeto Nodo. El proceso de eliminación consiste en desenlazarlo lógicamente de la cadena: hacer que el nodo previo apunte directamente al nodo siguiente (anterior.setSiguiente(actual.getSiguiente())).
-- Una vez desenlazado, el nodo queda sin referencias accesibles desde la raíz 'head'. El recolector de basura de Java (Garbage Collector) detecta de forma autónoma que el objeto es inalcanzable (unreachable) y reclama su memoria en el heap.
-
-### Casos a Contemplar
-1. Lista vacía (head == null): No hay nada que eliminar, retorna false.
-2. Eliminar el primer nodo (head.getDato() == dato): Se actualiza head = head.getSiguiente(), se decrementa size (size--) y retorna true.
-3. Eliminar un nodo del medio: Se busca manteniendo punteros 'anterior' y 'actual'. Al coincidir, anterior.setSiguiente(actual.getSiguiente()), size--, retorna true.
-4. Eliminar el último nodo: Al coincidir en el último, anterior.setSiguiente(null), size--, retorna true.
-5. Dato inexistente: Se recorre toda la lista hasta actual == null sin encontrar el valor, retorna false y size no se modifica.
-
-Ajustes realizados luego de la primera respuesta de OpenCode:
-Sin ajustes.
-*/
-
 package listas_enlazadas.ejercicio05;
 
 public class ListaEnlazada {
@@ -159,3 +138,23 @@ public class ListaEnlazada {
     }
 }
 
+/*
+Prompt inicial utilizado:
+A partir de la ListaEnlazada con inserción en posición, quiero implementar el método para eliminar un nodo por su valor:
+boolean eliminar(int dato)
+
+### Razonamiento Conceptual: Cómo se elimina en Java y el Garbage Collector
+- En lenguajes como C/C++, la memoria dinámica se libera manualmente mediante llamadas a free() o delete.
+- En Java NO se destruye manualmente el objeto Nodo. El proceso de eliminación consiste en desenlazarlo lógicamente de la cadena: hacer que el nodo previo apunte directamente al nodo siguiente (anterior.setSiguiente(actual.getSiguiente())).
+- Una vez desenlazado, el nodo queda sin referencias accesibles desde la raíz 'head'. El recolector de basura de Java (Garbage Collector) detecta de forma autónoma que el objeto es inalcanzable (unreachable) y reclama su memoria en el heap.
+
+### Casos a Contemplar
+1. Lista vacía (head == null): No hay nada que eliminar, retorna false.
+2. Eliminar el primer nodo (head.getDato() == dato): Se actualiza head = head.getSiguiente(), se decrementa size (size--) y retorna true.
+3. Eliminar un nodo del medio: Se busca manteniendo punteros 'anterior' y 'actual'. Al coincidir, anterior.setSiguiente(actual.getSiguiente()), size--, retorna true.
+4. Eliminar el último nodo: Al coincidir en el último, anterior.setSiguiente(null), size--, retorna true.
+5. Dato inexistente: Se recorre toda la lista hasta actual == null sin encontrar el valor, retorna false y size no se modifica.
+
+Ajustes realizados luego de la primera respuesta de OpenCode:
+Sin ajustes.
+*/

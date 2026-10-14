@@ -1,24 +1,3 @@
-/*
-Prompt inicial utilizado:
-A partir de la ListaEnlazada con modificación de elementos, quiero implementar un método para contar cuántas veces se repite un valor:
-int contarOcurrencias(int dato)
-
-### Razonamiento Conceptual: Recorrido Exhaustivo vs. Corte Temprano
-- En el método 'buscar(dato)', el objetivo es verificar si el dato existe al menos una vez. Apenas se detecta la primera coincidencia, es óptimo cortar el bucle inmediatamente retornando true (detención temprana O(1) en mejor caso).
-- En 'contarOcurrencias(dato)', el objetivo es calcular la frecuencia exacta total. Dado que la lista no está ordenada y los nodos repetidos pueden estar distribuidos arbitrariamente a lo largo de toda la cadena, cualquier nodo no visitado podría albergar una nueva ocurrencia del elemento buscado.
-- Por ende, cortar el recorrido al hallar la primera coincidencia daría como resultado un conteo incompleto e incorrecto. Es un requisito lógico ineludible recorrer la lista de principio a fin hasta actual == null (complejidad Theta(n)).
-
-### Casos a Contemplar
-- Lista vacía: retorna 0 ocurrencias.
-- El dato no aparece ninguna vez (0 ocurrencias).
-- El dato aparece exactamente una vez (1 ocurrencia).
-- El dato aparece múltiples veces (por ejemplo 10 -> 20 -> 10 -> 30 -> 10 -> null retorna 3).
-- Todos los nodos de la lista contienen dicho dato (ocurrencias == size).
-
-Ajustes realizados luego de la primera respuesta de OpenCode:
-Sin ajustes.
-*/
-
 package listas_enlazadas.ejercicio08;
 
 public class ListaEnlazada {
@@ -196,3 +175,23 @@ public class ListaEnlazada {
     }
 }
 
+/*
+Prompt inicial utilizado:
+A partir de la ListaEnlazada con modificación de elementos, quiero implementar un método para contar cuántas veces se repite un valor:
+int contarOcurrencias(int dato)
+
+### Razonamiento Conceptual: Recorrido Exhaustivo vs. Corte Temprano
+- En el método 'buscar(dato)', el objetivo es verificar si el dato existe al menos una vez. Apenas se detecta la primera coincidencia, es óptimo cortar el bucle inmediatamente retornando true (detención temprana O(1) en mejor caso).
+- En 'contarOcurrencias(dato)', el objetivo es calcular la frecuencia exacta total. Dado que la lista no está ordenada y los nodos repetidos pueden estar distribuidos arbitrariamente a lo largo de toda la cadena, cualquier nodo no visitado podría albergar una nueva ocurrencia del elemento buscado.
+- Por ende, cortar el recorrido al hallar la primera coincidencia daría como resultado un conteo incompleto e incorrecto. Es un requisito lógico ineludible recorrer la lista de principio a fin hasta actual == null (complejidad Theta(n)).
+
+### Casos a Contemplar
+- Lista vacía: retorna 0 ocurrencias.
+- El dato no aparece ninguna vez (0 ocurrencias).
+- El dato aparece exactamente una vez (1 ocurrencia).
+- El dato aparece múltiples veces (por ejemplo 10 -> 20 -> 10 -> 30 -> 10 -> null retorna 3).
+- Todos los nodos de la lista contienen dicho dato (ocurrencias == size).
+
+Ajustes realizados luego de la primera respuesta de OpenCode:
+Sin ajustes.
+*/
