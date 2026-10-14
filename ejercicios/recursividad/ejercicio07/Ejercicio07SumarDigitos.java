@@ -1,4 +1,4 @@
-package recursividad;
+package recursividad.ejercicio07;
 
 public class Ejercicio07SumarDigitos {
 

@@ -1,4 +1,4 @@
-package recursividad;
+package recursividad.ejercicio08;
 
 public class Ejercicio08InvertirString {
 

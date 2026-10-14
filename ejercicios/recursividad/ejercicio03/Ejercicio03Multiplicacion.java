@@ -1,4 +1,4 @@
-package recursividad;
+package recursividad.ejercicio03;
 
 public class Ejercicio03Multiplicacion {
 

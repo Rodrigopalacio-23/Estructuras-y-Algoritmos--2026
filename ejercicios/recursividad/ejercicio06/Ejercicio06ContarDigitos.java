@@ -1,4 +1,4 @@
-package recursividad;
+package recursividad.ejercicio06;
 
 public class Ejercicio06ContarDigitos {
 

@@ -1,4 +1,4 @@
-package recursividad;
+package recursividad.ejercicio09;
 
 public class Ejercicio09Palindromo {
 

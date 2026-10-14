@@ -1,4 +1,4 @@
-package recursividad;
+package recursividad.ejercicio10;
 
 import java.util.Arrays;
 

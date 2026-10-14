@@ -1,4 +1,4 @@
-package ordenamiento;
+package ordenamiento.ejercicio01;
 
 import java.util.Arrays;
 

@@ -45,6 +45,6 @@ javac -d bin ejercicios/pilas_colas_enlazadas/ejercicio01/*.java
 java -cp bin pilas_colas_enlazadas.ejercicio01.Main
 
 # Ejemplo: Compilar y ejecutar Ejercicio de Ordenamiento
-javac -d bin ejercicios/ordenamiento/Ejercicio01Burbuja.java
-java -cp bin ordenamiento.Ejercicio01Burbuja
+javac -d bin ejercicios/ordenamiento/ejercicio01/Ejercicio01Burbuja.java
+java -cp bin ordenamiento.ejercicio01.Ejercicio01Burbuja
 ```

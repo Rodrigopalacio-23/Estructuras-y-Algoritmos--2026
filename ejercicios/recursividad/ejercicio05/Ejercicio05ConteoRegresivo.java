@@ -1,4 +1,4 @@
-package recursividad;
+package recursividad.ejercicio05;
 
 public class Ejercicio05ConteoRegresivo {
 

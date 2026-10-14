@@ -1,4 +1,4 @@
-package recursividad;
+package recursividad.ejercicio01;
 
 public class Ejercicio01Factorial {
 

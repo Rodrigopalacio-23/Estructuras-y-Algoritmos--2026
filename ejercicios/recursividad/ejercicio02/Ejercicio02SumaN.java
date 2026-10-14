@@ -1,4 +1,4 @@
-package recursividad;
+package recursividad.ejercicio02;
 
 public class Ejercicio02SumaN {
 
